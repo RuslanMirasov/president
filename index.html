@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
+    <meta name="theme-color" content="#1A2663" />
+    <meta name="description" content="Омский бекон" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="./assets/css/styles.min.css" />
+    <title>Омский бекон</title>
+  </head>
+  <body class="body night">
+    <!--PRELOADER-->
+    <div class="preloader" data-preloader>
+      <span>
+        <img src="./assets/img/favicon.svg" alt="Омский бекон" />
+      </span>
+    </div>
+
+    <div class="fixed-button">
+      <button class="button button--markets" data-popup-open="markets">Где купить</button>
+    </div>
+
+    <!--HEADER-->
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo">
+          <a href="./" class="logo" aria-label="Омский бекон">
+            <img src="./assets/img/svg/logo.svg" alt="Омский бекон" width="80" height="66" loading="eager" />
+          </a>
+        </div>
+
+        <nav class="navigation">
+          <ul class="menu">
+            <li><a href="./catalog" class="menu__link">Продукция</a></li>
+            <li><a href="./recipes" class="menu__link">Рецепты</a></li>
+            <li><a href="./about" class="menu__link">О бренде</a></li>
+            <li><a href="./distributors" class="menu__link">Дистрибьюторы</a></li>
+            <li><a href="#footer" data-scrollto class="menu__link">Контакты</a></li>
+            <li>
+              <ul class="socials">
+                <li>
+                  <a href="https://vk.com/omskiy.bacon" target="_blank"> <img src="./assets/img/socials/vk.webp" alt="Омский бекон" /> </a>
+                </li>
+                <li>
+                  <a href="https://app.box.com/s/ecbi2021cj077xrbalwhabdpht4shzil" target="_blank">
+                    <img src="./assets/img/socials/youtube.webp" alt="Омский бекон" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://music.yandex.ru/artist/7525778" target="_blank">
+                    <img src="./assets/img/socials/vk_music.webp" alt="Омский бекон" />
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="burger">
+          <span>Меню бургер</span>
+        </button>
+      </div>
+    </header>
+
+    <main class="main">
+      <!--ГЕРОЙ-->
+      <section class="section section--hero">
+        <div class="swiper swiper--hero">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/img/hero/slide1.webp" media="(min-width: 450px)" />
+                <img src="./assets/img/hero/slide1-mobil.webp " alt="Омский бекон" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/img/hero/slide2.webp" media="(min-width: 450px)" />
+                <img src="./assets/img/hero/slide2-mobil.webp " alt="Омский бекон" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/img/hero/slide3.webp" media="(min-width: 450px)" />
+                <img src="./assets/img/hero/slide3-mobil.webp " alt="Омский бекон" />
+              </picture>
+            </div>
+            <div class="swiper-slide">
+              <picture>
+                <source srcset="./assets/img/hero/slide4.webp" media="(min-width: 450px)" />
+                <img src="./assets/img/hero/slide4-mobil.webp " alt="Омский бекон" />
+              </picture>
+            </div>
+          </div>
+        </div>
+        <div class="container">
+          <h1 class="title">Лучшее в мире <br />сделано в сибири!<span>*</span></h1>
+          <div class="thumb">
+            <div class="swiper swiper--thumb">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <img src="./assets/img/hero/thumb1.webp" alt="Омский бекон" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/hero/thumb2.webp" alt="Омский бекон" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/hero/thumb3.webp" alt="Омский бекон" />
+                </div>
+                <div class="swiper-slide">
+                  <img src="./assets/img/hero/thumb4.webp" alt="Омский бекон" />
+                </div>
+              </div>
+            </div>
+            <p class="hero-info">
+              * Информация была собрана в&nbsp;рамках исследования, проведенного ООО «Тибурон» с&nbsp;помощью онлайн-платформы Fastuna среди 100
+              человек, участвовавших в&nbsp;онлайн-опросе 22 июня 2024 года
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!--СЛАЙДЕР КАТЕГОРИЙ-->
+      <section
+        class="section section--slider"
+        data-slider
+        data-slides-per-view="4,3,1"
+        data-slides-per-group="4,3,1"
+        data-space-between="33.333333,24,24"
+      >
+        <div class="container">
+          <h2 class="title">Вкус, проверенный временем</h2>
+          <div class="slider-arrows">
+            <button data-arrow-prev class="swiper-arrow"></button>
+            <button data-arrow-next class="swiper-arrow"></button>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/1.webp" alt="Омский бекон" />
+                  <h3 class="title">Вареные колбасы</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/2.webp" alt="Омский бекон" />
+                  <h3 class="title">Сосиски</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/3.webp" alt="Омский бекон" />
+                  <h3 class="title">Сардельки и&nbsp;шпикачки</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/4.webp" alt="Омский бекон" />
+                  <h3 class="title">Гриль ассортимент</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/5.webp" alt="Омский бекон" />
+                  <h3 class="title">Котлеты</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/6.webp" alt="Омский бекон" />
+                  <h3 class="title">Деликатесы</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/7.webp" alt="Омский бекон" />
+                  <h3 class="title">Ветчины</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/8.webp" alt="Омский бекон" />
+                  <h3 class="title">Копченые колбасы</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/9.webp" alt="Омский бекон" />
+                  <h3 class="title">Сырокопченые колбасы</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/10.webp" alt="Омский бекон" />
+                  <h3 class="title">Sibeeria</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/11.webp" alt="Омский бекон" />
+                  <h3 class="title">Холодцы и&nbsp;паштеты</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/12.webp" alt="Омский бекон" />
+                  <h3 class="title">Фарши</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./catalog/category" class="article-image" tabindex="0">
+                  <img src="./assets/img/categories/13.webp" alt="Омский бекон" />
+                  <h3 class="title">Полуфабрикаты</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination" data-pagination></div>
+
+          <a href="./catalog" class="link">смотреть весь каталог</a>
+        </div>
+      </section>
+
+      <!--PARALLAX-->
+      <section class="section section--parallax">
+        <div class="parallax">
+          <img src="./assets/img//parallax/background.webp" alt="Омский бекон" />
+          <img src="./assets/img//parallax/text.webp" alt="Омский бекон" data-parallax="0.3" class="parallax-text" />
+          <img src="./assets/img//parallax/forground.webp" alt="Омский бекон" />
+        </div>
+      </section>
+
+      <!--БАННЕР ОМСКИЙ БЕКОН-->
+      <section class="section section--banner">
+        <div class="container">
+          <div class="banner">
+            <div class="text-content">
+              <h2 class="title">«Омский бекон»</h2>
+              <p class="subtitle">
+                Мы - сибиряки. Живем на&nbsp;земле, полной богатств и&nbsp;заповедных красот. Сибирские просторы вдохновляют нас на&nbsp;создание
+                вкусных&nbsp;и&nbsp;качественных продуктов.
+              </p>
+              <p class="subtitle">
+                «Омский бекон» — это истинная сибирская сила и уникальный вкус в&nbsp;каждом кусочке на&nbsp;всех этапах производства . Мы сами
+                выращиваем мясо на&nbsp;собственных фермах, чтобы полностью быть уверенными в&nbsp;его качестве, не&nbsp;жалеем мяса
+                и&nbsp;натуральных специй для&nbsp;изготовления широкого ассортимента колбас, деликатесов и&nbsp;мясных полуфабрикатов.
+              </p>
+              <a href="./about" class="button small">Подробнее</a>
+            </div>
+            <div class="banner__image blue-gradient position-bottom">
+              <img src="./assets/img/banner-about.webp" alt="Омский бекон" loading="lazy" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--НОВИНКИ-->
+      <section
+        class="section section--slider"
+        data-slider
+        data-slides-per-view="4,3,1"
+        data-slides-per-group="4,3,1"
+        data-space-between="33.333333,24,24"
+      >
+        <div class="container">
+          <h2 class="title">Новинки</h2>
+          <div class="slider-arrows">
+            <button data-arrow-prev class="swiper-arrow"></button>
+            <button data-arrow-next class="swiper-arrow"></button>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <article class="article">
+                  <a href="./catalog/category/product" class="article-image" tabindex="0">
+                    <div class="spinner"></div>
+                    <img src="./assets/img/products/grill/17.webp" alt="Омский бекон" />
+                  </a>
+                  <h3 class="title title--h3">Наименование товара</h3>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="article">
+                  <a href="./catalog/category/product" class="article-image" tabindex="0">
+                    <div class="spinner"></div>
+                    <img src="./assets/img/products/grill/18.webp" alt="Омский бекон" />
+                  </a>
+                  <h3 class="title title--h3">Наименование товара</h3>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="article">
+                  <a href="./catalog/category/product" class="article-image" tabindex="0">
+                    <div class="spinner"></div>
+                    <img src="./assets/img/products/grill/19.webp" alt="Омский бекон" />
+                  </a>
+                  <h3 class="title title--h3">Наименование товара</h3>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="article">
+                  <a href="./catalog/category/product" class="article-image" tabindex="0">
+                    <div class="spinner"></div>
+                    <img src="./assets/img/products/grill/20.webp" alt="Омский бекон" />
+                  </a>
+                  <h3 class="title title--h3">Наименование товара</h3>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="article">
+                  <a href="./catalog/category/product" class="article-image" tabindex="0">
+                    <div class="spinner"></div>
+                    <img src="./assets/img/products/varenie_kolbasi/5.webp" alt="Омский бекон" />
+                  </a>
+                  <h3 class="title title--h3">Наименование товара</h3>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="article">
+                  <a href="./catalog/category/product" class="article-image" tabindex="0">
+                    <div class="spinner"></div>
+                    <img src="./assets/img/products/varenie_kolbasi/6.webp" alt="Омский бекон" />
+                  </a>
+                  <h3 class="title title--h3">Наименование товара</h3>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="article">
+                  <a href="./catalog/category/product" class="article-image" tabindex="0">
+                    <div class="spinner"></div>
+                    <img src="./assets/img/products/varenie_kolbasi/7.webp" alt="Омский бекон" />
+                  </a>
+                  <h3 class="title title--h3">Наименование товара</h3>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="article">
+                  <a href="./catalog/category/product" class="article-image" tabindex="0">
+                    <div class="spinner"></div>
+                    <img src="./assets/img/products/varenie_kolbasi/10.webp" alt="Омский бекон" />
+                  </a>
+                  <h3 class="title title--h3">Наименование товара</h3>
+                </article>
+              </div>
+              <div class="swiper-slide">
+                <article class="article">
+                  <a href="./catalog/category/product" class="article-image" tabindex="0">
+                    <div class="spinner"></div>
+                    <img src="./assets/img/products/varenie_kolbasi/9.webp" alt="Омский бекон" />
+                  </a>
+                  <h3 class="title title--h3">Наименование товара</h3>
+                </article>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination" data-pagination></div>
+        </div>
+      </section>
+
+      <!--ИГРА-->
+      <section class="section section--game">
+        <div class="game-banner intro" data-poligon>
+          <div class="container">
+            <div class="text-content text-content--intro align-center">
+              <h2 class="title">Играй и узнай,<br />какая ты сибирская<br />колбаса</h2>
+              <button class="button big" data-start-game>Играть</button>
+            </div>
+            <!-- <div class="blue-gradient"></div> -->
+            <div class="text-content text-content--result">
+              <h2 class="title" data-game-title></h2>
+              <p data-game-description></p>
+              <!-- <p>Играй снова, чтобы удивить друзей</p> -->
+              <button class="button" data-restart-game>Играть снова</button>
+            </div>
+            <div class="game-images" data-game-images>
+              <img src="./assets/img/game/1.webp" alt="Омский бекон" data-game-image="1" class="gameItem-1 active" />
+              <img src="./assets/img/game/2.webp" alt="Омский бекон" data-game-image="2" class="gameItem-2" />
+              <img src="./assets/img/game/3.webp" alt="Омский бекон" data-game-image="3" class="gameItem-3" />
+              <img src="./assets/img/game/4.webp" alt="Омский бекон" data-game-image="4" class="gameItem-4" />
+              <img src="./assets/img/game/5.webp" alt="Омский бекон" data-game-image="5" class="gameItem-5" />
+              <img src="./assets/img/game/6.webp" alt="Омский бекон" data-game-image="6" class="gameItem-6" />
+              <img src="./assets/img/game/7.webp" alt="Омский бекон" data-game-image="7" class="gameItem-7" />
+              <img src="./assets/img/game/8.webp" alt="Омский бекон" data-game-image="8" class="gameItem-8" />
+              <img src="./assets/img/game/9.webp" alt="Омский бекон" data-game-image="9" class="gameItem-9" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--ПОПРОБУЙ СИБИРЬ НА ВКУС-->
+      <section
+        class="section section--slider"
+        data-slider
+        data-slides-per-view="3,3,1"
+        data-slides-per-group="3,3,1"
+        data-space-between="33.333333,24,24"
+      >
+        <div class="container">
+          <h2 class="title">Попробуй сибирь&nbsp;на&nbsp;вкус</h2>
+          <div class="slider-arrows">
+            <button data-arrow-prev class="swiper-arrow"></button>
+            <button data-arrow-next class="swiper-arrow"></button>
+          </div>
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <a href="./recipes/pizza-s-varenoy-kolbasoy" class="article-image medium-size">
+                  <img src="./assets/img/recipes/1/thumbnail.webp" alt="Омский бекон" />
+                  <h3 class="title">пицца с&nbsp;вареной колбасой</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./recipes/pasta-s-vetchinoy" class="article-image medium-size">
+                  <img src="./assets/img/recipes/2/thumbnail.webp" alt="Омский бекон" />
+                  <h3 class="title">Паста с&nbsp;ветчиной</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./recipes/hot-dog-s-lukom-i-bekonom" class="article-image medium-size">
+                  <img src="./assets/img/recipes/3/thumbnail.webp" alt="Омский бекон" />
+                  <h3 class="title">Хот-Дог с&nbsp;луком и&nbsp;беконом</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./recipes/salat-s-ovoshami-i-kapchonoy-kolbasoy" class="article-image medium-size">
+                  <img src="./assets/img/recipes/4/thumbnail.webp" alt="Омский бекон" />
+                  <h3 class="title">Теплый салат с&nbsp;овощами и&nbsp;копченой колбасой</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./recipes/sosiski-s-ovoshami-v-folge" class="article-image medium-size">
+                  <img src="./assets/img/recipes/5/thumbnail.webp" alt="Омский бекон" />
+                  <h3 class="title">Сосиски с&nbsp;овощами в&nbsp;фольге</h3>
+                </a>
+              </div>
+              <div class="swiper-slide">
+                <a href="./recipes/kartofel-s-grudinkoy-i-yaizom" class="article-image medium-size">
+                  <img src="./assets/img/recipes/6/thumbnail.webp" alt="Омский бекон" />
+                  <h3 class="title">Картофель с&nbsp;грудинкой и&nbsp;яйцом</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-pagination" data-pagination></div>
+
+          <a href="./recipes" class="link">Смотреть все рецепты</a>
+        </div>
+      </section>
+
+      <!--ФИРМЕННЫЕ МАГАЗИНЫ-->
+      <section class="section section--markets">
+        <div class="markets-banner">
+          <div class="container">
+            <span class="markets-count">16 торговых точек</span>
+            <div class="text-content">
+              <h2 class="title">Фирменные магазины в&nbsp;городе Омск</h2>
+              <p class="subtitle">Стремясь стать ближе к нашему покупателю, в 2023 году мы открыли свой первый фирменный магазин!</p>
+              <p class="subtitle">
+                За это время сеть магазинов от бренда «Омский бекон» стала своеобразными центром притяжения для любителей качественного свежего мяса,
+                ценителей настоящих мясных деликатесов. На сегодняшний день, мы рады встречать покупателей в 16 торговых точках, ежедневно делая более
+                тысячи покупателей счастливее!
+              </p>
+              <button class="button big" data-popup-open="addresses">Подробнее</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--БЕГУЩАЯ СТРОКА-->
+      <div class="marquee">
+        <div class="marquee__inner">
+          <span>СДЕЛАНО В СИБИРИ&nbsp;&nbsp;СДЕЛАНО В СИБИРИ</span>
+          <span>СДЕЛАНО В СИБИРИ&nbsp;&nbsp;СДЕЛАНО В СИБИРИ</span>
+        </div>
+      </div>
+
+      <!--ФОРМА ОБРАТНОЙ СВЯЗИ-->
+      <section class="section section--callbcak">
+        <div class="container">
+          <h2 class="title title--h2">Обратная связь</h2>
+
+          <script>
+            // ОТПРАВКА ФОРМЫ КУДА ЛИБО
+            const onCallbackFormSubmit = e => {
+              e.preventDefault();
+              popup.open('ok');
+            };
+          </script>
+
+          <form action="#" enctype="multipart/form-data" class="form" novalidate onsubmit="onCallbackFormSubmit(event)">
+            <label class="label">
+              <select name="subject" class="input input--select placeholder" required>
+                <option value="" disabled selected hidden>ТЕМА*</option>
+                <option value="Тема 1">Тема 1</option>
+                <option value="Тема 2">Тема 2</option>
+                <option value="Тема 3">Тема 3</option>
+              </select>
+              <span class="input-icon">
+                <svg width="14" height="7"><use href="#select-arrow" /></svg>
+              </span>
+            </label>
+            <label class="label label--textarea">
+              <textarea name="message" class="textarea" placeholder="Сообщение*" required></textarea>
+            </label>
+            <label class="label">
+              <input type="text" name="city" class="input" placeholder="Город*" required />
+            </label>
+            <label class="label">
+              <input type="text" name="name" class="input" placeholder="ФИО*" required />
+            </label>
+            <label class="label label--forFile">
+              <svg width="26" height="23"><use href="#input-file" /></svg>
+              <input type="file" name="file" class="input input--file" required />
+              <span class="file-placeholder">ПРИКРЕПИТЕ ФАЙЛ</span>
+            </label>
+            <label class="label">
+              <input type="tel" name="phone" class="input" placeholder="Телефон*" required />
+            </label>
+            <label class="label">
+              <input type="email" name="email" class="input" placeholder="Почта*" required />
+            </label>
+            <div class="label label--forButton">
+              <button type="submit" class="button full">Отправить <span class="only-in-desctop">&nbsp;сообщение</span></button>
+            </div>
+
+            <span class="form__info">
+              Отправляя свои контактные данные вы соглашаетесь с&nbsp;<a href="./assets/pdf/policy.pdf" target="_blank"
+                >политикой конфиденциальности</a
+              >
+              <br />
+              <br class="show_in_tablet" />
+              *Все поля обязательны к заполнению*
+            </span>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--FOOTER-->
+    <footer class="footer" id="footer">
+      <a href="./" class="logo" aria-label="Омский бекон">
+        <img src="./assets/img/logo.webp" alt="Омский бекон" width="80" height="66" loading="eager" />
+      </a>
+
+      <address class="address">
+        <span>Юридический адрес:</span>
+        <a href="tel:88007007420">646906, Омская область, г.&nbsp;Калачинск, ул.&nbsp;Строительная 11</a>
+      </address>
+
+      <ul class="footer__menu">
+        <li><a href="./catalog">Продукция</a></li>
+        <li><a href="./recipes">Рецепты</a></li>
+        <li><a href="./about">О бренде</a></li>
+        <li>
+          <span>Горячая линия:&nbsp;</span><br />
+          <a href="tel:88007007420">8 800 700 74 20</a>
+        </li>
+      </ul>
+    </footer>
+
+    <!--POPUPS-->
+    <div class="backdrop" data-backdrop>
+      <div class="popup" data-popup>
+        <!--popup markets-->
+        <div class="popup-content" id="markets">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="popup-title">Где купить</h2>
+          <ul class="markets-list custom-scrollbar">
+            <li>
+              <a href="./contacts" target="_blank"><img src="./assets/img/markets/omsk_becon.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://samokat.ru/" target="_blank"><img src="./assets/img/markets/samokat.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://kuper.ru/" target="_blank"><img src="./assets/img/markets/kuper.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://lavka.yandex.ru/" target="_blank"><img src="./assets/img/markets/yandex_lavka.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://www.metro-cc.ru/" target="_blank"><img src="./assets/img/markets/metro.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://lenta.com/" target="_blank"><img src="./assets/img/markets/lenta.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://www.okmarket.ru/" target="_blank"><img src="./assets/img/markets/okey.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://www.perekrestok.ru/" target="_blank"><img src="./assets/img/markets/perekrestok.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://magnit.ru/" target="_blank"><img src="./assets/img/markets/magnit.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://5ka.ru/" target="_blank"><img src="./assets/img/markets/pyaterochka.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://xn--e1avv4a.xn--p1ai/" target="_blank"><img src="./assets/img/markets/yarche.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://sparomsk.ru/" target="_blank"><img src="./assets/img/markets/spar.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://bystronom.ru/" target="_blank"><img src="./assets/img/markets/bistronom.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://monetka.ru/" target="_blank"><img src="./assets/img/markets/monetka.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://www.begemag.ru/" target="_blank"><img src="./assets/img/markets/begemag.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://www.anixtd.ru/" target="_blank"><img src="./assets/img/markets/anix.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://www.maria-ra.ru/" target="_blank"><img src="./assets/img/markets/maria_ra.webp" alt="Омский бекон" /></a>
+            </li>
+            <li>
+              <a href="https://www.auchan.ru/" target="_blank"><img src="./assets/img/markets/ashan.webp" alt="Омский бекон" /></a>
+            </li>
+          </ul>
+        </div>
+
+        <!--popup form send secsses-->
+        <div class="popup-content" id="ok">
+          <button class="popup-close" data-popup-close></button>
+          <h2 class="popup-title">Сообщение отправлено</h2>
+          <p class="popup-subtitle">Наш менеджер свяжется с&nbsp;Вами&nbsp;в&nbsp;ближайшее время</p>
+          <button class="button small" data-popup-close>Закрыть</button>
+        </div>
+
+        <div class="popup-content" id="addresses">
+          <button class="popup-close" data-popup-close></button>
+          <img src="./assets/img/addresses.webp" alt="Омский бекон" class="addresses__image" />
+          <div class="addresses__content">
+            <h2 class="title title--h2">Фирменные магазины <br />в&nbsp;городе Омск</h2>
+            <p class="addresses__description">
+              Стремясь стать ближе к&nbsp;нашему покупателю, в&nbsp;2023 году мы открыли свой первый фирменный магазин!
+              <br /><br />
+
+              За это время сеть магазинов от&nbsp;бренда «Омский бекон» стала своеобразными центром притяжения для&nbsp;любителей качественного
+              свежего мяса, ценителей настоящих мясных деликатесов. На&nbsp;сегодняшний день, мы рады встречать покупателей в&nbsp;16 торговых точках,
+              ежедневно делая более тысячи покупателей счастливее!
+
+              <br /><br />
+
+              В ассортиментной линейке более 280 наименований продукции, вся продукция производится из&nbsp;отборной свинины с&nbsp;собственных
+              современных свиноферм. Наша команда постоянно работает над&nbsp;расширением ассортимента и&nbsp;созданием новых эксклюзивных продуктов,
+
+              <br class="desctop-only" /><br class="desctop-only" />
+
+              которые можно приобрести только в&nbsp;фирменных магазинах. Это гарантия исключительного качества, основанного на&nbsp;любви
+              к&nbsp;своему делу и &nbsp;уважении к&nbsp;каждому клиенту.
+
+              <br /><br />
+
+              Фирменные магазины от&nbsp;бренда «Омский бекон» стремятся быть полезным своему покупателю, предлагая бесплатную услугу по&nbsp;нарезке
+              колбас и&nbsp;деликатесов, приготовления фарша из&nbsp;купленного мяса.
+
+              <br /><br />
+
+              А чтобы ваш обед или&nbsp;ужин были полноценными, в&nbsp;наших магазинах представлена сопутствующая продукция других категорий: молочные
+              продукты, сыры, яйца, приправы, соусы, хлеб - самое необходимое для приготовления ваших любимых блюд!
+            </p>
+
+            <h2 class="title title--h3">Адреса магазинов</h2>
+
+            <ul class="addresses__list">
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/90161486584/?ll=73.328533%2C54.950599&z=17" target="_blank">
+                  <span>1. г. Омск,&nbsp;</span>ул. Авиагородок, д.38
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/201006278919/?ll=73.446132%2C55.032635&z=17" target="_blank">
+                  <span>2. г. Омск,&nbsp;</span>ул. 21-ая Амурская, д.46Б/1
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/167140767876/?ll=73.321868%2C55.047739&z=17" target="_blank">
+                  <span>3. г. Омск,&nbsp;</span>ул. Бархатовой, д.4В
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/78533444909/?ll=73.453210%2C54.992493&z=17" target="_blank">
+                  <span>4. г. Омск,&nbsp;</span>ул Биофабрика, д.20
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/magazin_kolbasnykh_izdeliy/56334462342/?ll=73.279413%2C54.985664&z=17" target="_blank">
+                  <span>5. г. Омск,&nbsp;</span>ул. Ватутина, д.13а
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/35922550561/?indoorLevel=1&ll=73.254027%2C54.995158&z=17" target="_blank">
+                  <span>6. г. Омск,&nbsp;</span>ул. Дианова, д.12
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/140363192822/?indoorLevel=1&ll=73.316505%2C55.046600&z=17" target="_blank">
+                  <span>7. г. Омск,&nbsp;</span>ул. Заозерная, д.11/1 (ТК&nbsp;«Первомайский»)
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/230585083325/?ll=73.411268%2C55.175047&z=10" target="_blank">
+                  <span>8. г. Омск,&nbsp;</span>ул. Кирова, д.12
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/63733539869/?indoorLevel=1&ll=73.447084%2C54.968918&z=17" target="_blank">
+                  <span>9. г. Омск,&nbsp;</span>пр. Космический, д.17Б/3
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/221183848182/?ll=73.335657%2C55.011041&z=17" target="_blank">
+                  <span>10. г. Омск,&nbsp;</span>ул. Красный путь, д.139А/1
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/106848068030/?ll=73.383088%2C54.944445&z=17" target="_blank">
+                  <span>11. г. Омск,&nbsp;</span>ул. Серова, д.22
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/27675733378/?ll=73.377743%2C55.023935&z=17" target="_blank">
+                  <span>12. г. Омск,&nbsp;</span>ул. Совхозная д.188
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/27536649029/?ll=73.203955%2C55.001375&z=17" target="_blank">
+                  <span>13. г. Омск,&nbsp;</span>ул. 2-я Солнечная, д. 42/4, пом.5а
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/89091145005/?ll=73.290876%2C55.039347&z=17" target="_blank">
+                  <span>14. г. Омск,&nbsp;</span>ул. Химиков, д.49
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/138472607582/?indoorLevel=1&ll=73.416317%2C55.025483&z=17" target="_blank">
+                  <span>15. г. Омск,&nbsp;</span>ул. 4-я Челюскинцев, д.66/1 (ТК&nbsp;«Амурский»)
+                </a>
+              </li>
+              <li>
+                <a href="https://yandex.eu/maps/org/omskiy_bekon/196695154046/?ll=73.301665%2C54.890469&z=17" target="_blank">
+                  <span>16. г. Омск,&nbsp;</span>пр. Яснополянский, д.5а
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+      <symbol id="select-arrow" viewBox="0 0 23 14" preserveAspectRatio="none" fill="none">
+        <path d="M1 1.25L11.5 11.75L22 1.25" stroke="currentColor" stroke-width="2" />
+      </symbol>
+
+      <symbol id="input-file" viewBox="0 0 26 23" preserveAspectRatio="none" fill="none">
+        <path
+          d="M5.12577 6.41053C6.98648 4.60412 8.95978 2.89392 10.8959 1.16425C11.8466 0.596099 12.8785 1.78396 12.1078 2.58808C8.44092 6.77365 -1.93168 12.4598 3.69223 18.9065C6.35386 21.9569 8.95166 21.4781 11.8164 19.0257C15.597 15.7885 18.9737 11.5812 22.7288 8.25933C23.4728 7.38075 24.3736 6.12073 23.9116 4.90881C23.7189 4.4048 21.9836 2.68659 21.4868 2.37617C19.2952 1.00503 17.0898 3.48384 15.5831 4.87445C12.6336 7.59724 9.8884 10.572 7.05497 13.4117C5.56686 15.5881 7.93947 17.564 9.94876 15.9237C12.5663 13.4712 15.0004 10.8206 17.6133 8.367C17.9813 8.02221 19.7317 6.32577 19.9697 6.22382C20.788 5.87216 21.6168 6.97296 21.0399 7.74043C17.8942 10.5766 15.0445 14.0176 11.8745 16.7943C10.1647 18.2914 8.15421 19.2948 6.06715 17.7072C4.13912 16.241 4.19136 13.627 5.77464 11.9203C9.25114 8.8481 12.3748 4.9489 15.8745 1.95578C19.1699 -0.863237 21.7862 -0.614669 24.6417 2.58579C26.7961 5.0016 26.1763 7.23184 24.2366 9.5205C20.5547 12.871 17.2035 16.8183 13.4995 20.1161C9.66901 23.5274 5.88608 24.3567 2.18207 20.1677C-2.43778 14.9409 1.10604 10.312 5.12461 6.41168L5.12577 6.41053Z"
+          fill="currentColor"
+        />
+      </symbol>
+    </svg>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="./assets/js/parallax.js" type="module"></script>
+    <script src="./assets/js/game.js" type="module"></script>
+    <script src="./assets/js/forms.js" type="module"></script>
+    <script src="./assets/js/scripts.js" type="module"></script>
+  </body>
+</html>

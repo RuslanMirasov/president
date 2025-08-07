@@ -1,0 +1,248 @@
+.section--hero {
+  height: 630px;
+
+  color: var(--white);
+  overflow: hidden;
+  border-radius: 0px 0px 50px 50px;
+  text-align: left;
+  z-index: 1;
+  background: var(--color);
+  margin: 0 auto;
+
+  @media (max-width: 1279px) {
+    height: 430px;
+  }
+  @media (max-width: 767px) {
+    border-radius: 0px 0px 25px 25px;
+    height: 256px;
+    margin-top: 60px;
+    margin-bottom: 50px;
+    overflow: visible;
+  }
+
+  &.recipe--hero {
+    .hero-image {
+      width: 100%;
+      height: 100%;
+    }
+    .container {
+      padding-bottom: 34px;
+      h1 {
+        margin: 0;
+        max-width: 75%;
+      }
+    }
+    @media (max-width: 767px) {
+      margin-bottom: 0px;
+      overflow: hidden;
+      .container {
+        padding-bottom: 18px;
+        h1 {
+          max-width: 100%;
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  &.auto {
+    height: auto;
+    .container {
+      padding-bottom: 34px;
+      h1 {
+        margin: 0;
+        margin-top: 30px;
+      }
+    }
+    @media (max-width: 767px) {
+      overflow: hidden;
+      border-radius: 0px 0px 25px 25px;
+      height: 300px;
+      margin-bottom: 0px;
+      .container {
+        height: 100%;
+      }
+      h1.title {
+        font-size: 32px;
+      }
+    }
+  }
+  &.light {
+    height: auto;
+    background: #e8e9ef;
+    color: var(--color);
+    &:before {
+      content: none;
+    }
+    .container {
+      padding-bottom: 50px;
+      h1 {
+        margin: 0;
+      }
+    }
+  }
+
+  .title {
+    margin: auto 0px;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  &:before {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.3) 0%, rgba(87, 199, 133, 0) 25%, rgba(255, 255, 255, 0) 100%);
+    border-radius: 0px 0px 25px 25px;
+    z-index: 3;
+  }
+
+  &:after {
+    content: none;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 2;
+  }
+
+  .container {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    height: 100%;
+    padding-top: 136px;
+    padding-bottom: 30px;
+    z-index: 4;
+
+    @media (max-width: 1279px) {
+      padding-top: 86px;
+    }
+    @media (max-width: 767px) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    h1 {
+      span {
+        vertical-align: super;
+        font-size: 34px;
+      }
+      @media (max-width: 767px) {
+        font-size: 20px;
+        line-height: 1;
+        margin: 0;
+        span {
+          vertical-align: top;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
+
+.swiper--hero {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  .swiper-slide {
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width: 767px) {
+      overflow: hidden;
+      border-radius: 0px 0px 25px 25px;
+    }
+  }
+}
+
+.hero-info {
+  display: block;
+  margin-top: 15px;
+  font-size: 10.8px;
+  font-family: var(--500);
+  line-height: 1.3;
+  @media (max-width: 767px) {
+    font-size: 8px;
+    margin-top: 0px;
+  }
+}
+
+.thumb {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.swiper--thumb {
+  width: 100%;
+  overflow: visible;
+  @media (max-width: 767px) {
+    position: absolute;
+    top: 100%;
+    margin-top: 30px;
+    .swiper-wrapper {
+      justify-content: center;
+    }
+  }
+
+  .swiper-slide {
+    width: 105px;
+    height: 58px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 4px solid rgba(0, 0, 0, 0);
+    cursor: pointer;
+    transition: border 0.3s;
+    @media (max-width: 1279px) {
+      width: 65px;
+      height: 36px;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      background: var(--black);
+      z-index: -1;
+      border-radius: 6px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      opacity: 0.6;
+    }
+    &.swiper-slide-thumb-active {
+      border: 4px solid var(--red);
+      img {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.hero-image {
+  display: block;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
