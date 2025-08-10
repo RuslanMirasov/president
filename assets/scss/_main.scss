@@ -1,28 +1,33 @@
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
 .main {
   display: block;
   position: relative;
   z-index: 1;
-  min-height: 100vh;
+  flex: 1;
 }
 
 .container {
   display: block;
+  position: relative;
   width: 100%;
-  max-width: 1200px;
-  padding: 0px 30px;
+  max-width: 1270px;
   margin: 0 auto;
 
-  @media (max-width: 1279px) {
-    max-width: 768px;
-  }
-
-  @media (max-width: 767px) {
-    max-width: 414px;
+  @media (max-width: 1310px) {
     padding: 0px 20px;
   }
 }
 
 .section {
   position: relative;
-  //text-align: center;
+  overflow: hidden;
+  background: var(--bg);
+  z-index: 2;
+  &.visible {
+    overflow: visible;
+  }
 }

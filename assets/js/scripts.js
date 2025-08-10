@@ -9,4 +9,7 @@ initNavigationMenu();
 initSliders();
 fixHeaderOnScroll();
 initScrollToBlock();
-hidePreloader();
+
+setTimeout(() => {
+  hidePreloader();
+}, 300);

@@ -1,20 +1,18 @@
 :root {
-  --900: 'roadradio-black', sans-serif;
+  --2: 'circerounded-regular2', sans-serif;
+  --3: 'circerounded-regular3', sans-serif;
+  --4: 'circerounded-regular4', sans-serif;
+  --5: 'circerounded-regular5', sans-serif;
+  --400: 'montserrat-regular', sans-serif;
   --500: 'montserrat-medium', sans-serif;
-  --600: 'montserrat-semibold', sans-serif;
 
-  --bg: #ffffff;
-  --color: #1a2663;
-  --gradient: #92a4ff;
-  --blue: #7d86b2;
+  --bg: #cc0102;
+  --yellow: #ffe26b;
+  --yellow-light: #e6d689;
+  --color: #ffffff;
+  --gradient: linear-gradient(90deg, #ffe680 0%, #fab041 50%, #ffe680 100%);
   --white: #ffffff;
-  --brown: #ac9657;
-  --brown-hover: #99823f;
-
   --black: #000000;
-  --grey: #d5d5d5;
-  --grey-dark: #adadad;
-  --grey-darker: #616161;
   --red: #b7142b;
 }
 
@@ -23,27 +21,14 @@
 @import 'animations';
 @import 'preloader';
 @import 'reset';
-@import 'grid';
 @import 'main';
 @import 'swiper';
 @import 'header';
 @import 'buttons';
-@import 'article';
 @import 'typography';
 @import 'forms';
 @import 'footer';
 @import 'popup';
-@import 'breadcrumbs';
-@import 'runing_text';
 @import 'section__hero';
-@import 'section__slider';
-@import 'section__callback';
-@import 'section__markets';
-@import 'section__banner';
-@import 'section__game';
-@import 'section__parallax';
-@import 'section__contacts';
 @import 'section__about';
-@import 'section__page';
-@import 'section__product';
-@import 'section__recipes';
+@import 'section__mainprize';

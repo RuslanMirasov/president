@@ -25,11 +25,21 @@ export const hidePreloader = () => {
 
   setTimeout(() => {
     preloader.classList.add('hidden');
-  }, 200);
+  }, 300);
+
+  setTimeout(() => {
+    document.body.classList.add('loaded');
+  }, 400);
+
+  setTimeout(() => {
+    preloader.remove();
+  }, 2000);
 };
 
 export const fixHeaderOnScroll = () => {
   const header = document.querySelector('.header');
+
+  if (!header) return;
 
   const updateHeader = () => {
     if (window.scrollY > 0) {
@@ -59,6 +69,6 @@ export const initNavigationMenu = () => {
     menu.classList.toggle('open');
   };
 
-  burger.addEventListener('click', toggleMenu);
+  if (burger) burger.addEventListener('click', toggleMenu);
   menuLinks.forEach(link => link.addEventListener('click', toggleMenu));
 };
