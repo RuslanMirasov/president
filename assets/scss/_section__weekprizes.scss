@@ -1,0 +1,39 @@
+.section--weekprize {
+  padding: 100px 0px 80px 0px;
+}
+
+.swiper--weekprize {
+  margin-top: 100px;
+  overflow: visible;
+  .swiper-slide {
+    opacity: 0;
+    transition: opacity 0.6s;
+    &.swiper-slide-active,
+    &.swiper-slide-prev,
+    &.swiper-slide-next {
+      opacity: 1;
+    }
+  }
+}
+
+.weekprize {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 50px;
+
+  img {
+    width: 100%;
+    position: relative;
+    border-radius: 30px;
+  }
+
+  p {
+    display: block;
+    font-family: var(--4);
+    font-size: 24px;
+    text-align: center;
+  }
+}

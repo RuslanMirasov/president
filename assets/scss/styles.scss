@@ -7,6 +7,7 @@
   --500: 'montserrat-medium', sans-serif;
 
   --bg: #cc0102;
+  --bg-dark: #b60003;
   --yellow: #ffe26b;
   --yellow-light: #e6d689;
   --color: #ffffff;
@@ -26,9 +27,14 @@
 @import 'header';
 @import 'buttons';
 @import 'typography';
+@import 'accordeons';
+@import 'memory';
 @import 'forms';
 @import 'footer';
 @import 'popup';
 @import 'section__hero';
 @import 'section__about';
 @import 'section__mainprize';
+@import 'section__weekprizes';
+@import 'secsion__garanty';
+@import 'section__winners';

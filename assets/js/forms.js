@@ -241,6 +241,9 @@ const handleTelClick = e => {
 };
 
 const handleTelKeydown = e => {
+  if (e.key === 'Enter' || e.key === 'Tab') return;
+  if (e.ctrlKey || e.metaKey) return;
+
   e.preventDefault();
 
   const tel = e.target;

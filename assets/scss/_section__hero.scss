@@ -91,6 +91,7 @@
   min-width: 1440px;
   top: 0px;
   pointer-events: none;
+  overflow: hidden;
   img {
     width: 100%;
   }
@@ -243,8 +244,4 @@
     background: var(--yellow-light);
     position: absolute;
   }
-}
-
-.section--test {
-  height: 80vh;
 }
