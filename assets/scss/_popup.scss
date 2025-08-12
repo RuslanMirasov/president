@@ -260,3 +260,19 @@ body.locked {
     margin-bottom: 20px;
   }
 }
+
+#login {
+  .tabs {
+    background: var(--bg);
+    border-radius: 24px;
+    overflow: hidden;
+  }
+
+  .tabs-navigation {
+    background: var(--bg-dark);
+  }
+
+  .form {
+    padding: 30px 40px;
+  }
+}

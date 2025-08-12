@@ -1096,6 +1096,57 @@ a {
   top: 7px;
 }
 
+.tabs {
+  width: 100%;
+  display: block;
+}
+
+.tabs-navigation {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: stretch;
+  align-items: center;
+  align-content: center;
+}
+.tabs-navigation li {
+  flex: 1;
+}
+.tabs-navigation li:first-child {
+  flex: auto;
+}
+.tabs-navigation li button {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 20px;
+  min-height: 66px;
+  border-radius: 24px 24px 0px 0px;
+  background: rgba(0, 0, 0, 0);
+  transition: 0.3s;
+  font-size: 24px;
+  font-family: var(--4);
+  text-transform: uppercase;
+  padding: 0px 32px;
+}
+.tabs-navigation li button.active {
+  background: var(--bg);
+  pointer-events: none;
+}
+
+.tab {
+  display: block;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  height: 0px;
+  transition: 0.3s;
+}
+
 .memory-preview {
   display: flex;
   position: relative;
@@ -1866,6 +1917,18 @@ body.locked {
   margin: 0 auto;
   margin-top: -110px;
   margin-bottom: 20px;
+}
+
+#login .tabs {
+  background: var(--bg);
+  border-radius: 24px;
+  overflow: hidden;
+}
+#login .tabs-navigation {
+  background: var(--bg-dark);
+}
+#login .form {
+  padding: 30px 40px;
 }
 
 .section--hero {

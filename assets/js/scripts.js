@@ -3,6 +3,7 @@ import { fixHeaderOnScroll, hidePreloader, initNavigationMenu } from './helpers.
 import { initSliders } from './sliders.js';
 import { initScrollToBlock } from './scrollToBlock.js';
 import { initAccordeons } from './accordeon.js';
+import { initTabs } from './tabs.js';
 
 popup.init();
 window.popup = popup;
@@ -11,6 +12,7 @@ initSliders();
 fixHeaderOnScroll();
 initScrollToBlock();
 initAccordeons();
+initTabs();
 
 setTimeout(() => {
   hidePreloader();
