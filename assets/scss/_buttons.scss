@@ -48,6 +48,12 @@
     padding: 4px 24px;
     border-radius: 12px;
   }
+  &.button--submit {
+    font-size: 20px;
+    min-height: 54px;
+    padding: 4px 24px;
+    border-radius: 16px;
+  }
 
   &:before,
   &:after {

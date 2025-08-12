@@ -9,11 +9,36 @@
   --invalid: var(--yellow);
 }
 
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+
+  .link {
+    display: block;
+    font-family: var(--400);
+    font-size: 14px;
+    text-align: center;
+    margin: 0 auto;
+  }
+
+  .button--submit {
+    margin-bottom: 5px;
+  }
+}
+
 .label {
   display: block;
   width: 100%;
   position: relative;
   color: inherit;
+
+  .label__text {
+    font-size: 10px;
+    margin-bottom: 5px;
+    color: rgba(255, 255, 255, 0.7);
+  }
 }
 
 .input-icon {
@@ -110,7 +135,7 @@ span.input-icon {
 
   &.invalid {
     border: 1px solid var(--invalid);
-    color: var(--invalid);
+    color: var(--bg-dark);
     + .input-icon {
       color: var(--invalid);
     }
@@ -153,35 +178,37 @@ textarea {
 .radio,
 .checkbox {
   display: none;
-  + span {
+  + .label__text {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
     position: relative;
     width: 100%;
     font-family: var(--400);
-    padding-left: 46px;
-    font-size: 12px;
+    padding: 10px 0px;
+    padding-left: 40px;
+    font-size: 14px;
     line-height: 1.1;
     color: inherit;
     cursor: pointer;
-    margin-top: 20px;
+    margin-top: 8px;
+
     a {
       display: inline;
-      font-size: 12px;
-      text-decoration: underline;
       width: auto;
-      color: var(--black);
+      margin: 0;
     }
     &:before {
       content: '';
       display: block;
       position: absolute;
       left: 0px;
+      top: 4px;
       width: 26px;
       height: 26px;
-      border: 1px solid var(--black);
-      background: #f1f1f1;
+      border-radius: 6px;
+      border: 2px solid var(--white);
+      background: rgba(0, 0, 0, 0);
       transition: border 0.3s;
     }
   }
@@ -189,7 +216,7 @@ textarea {
   &:checked {
     + span {
       &:before {
-        background: #f1f1f1 url('../img/svg/checkbox.svg') no-repeat center center;
+        background: var(--white) url('../img/svg/checkbox.svg') no-repeat center center;
         background-size: 60% 60%;
       }
     }
@@ -225,6 +252,8 @@ textarea {
   color: var(--invalid);
   font-size: 14px;
   font-family: var(--400);
+  z-index: 10;
+  pointer-events: none;
   span {
     display: inline-block;
     position: relative;

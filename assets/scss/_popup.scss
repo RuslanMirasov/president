@@ -137,7 +137,7 @@ body.locked {
   color: var(--yellow);
   font-family: var(--4);
   margin-bottom: 24px;
-  &.white {
+  &.popup-title--white {
     font-size: 24px;
     font-family: var(--400);
     color: var(--white);
@@ -181,6 +181,12 @@ body.locked {
     align-items: center;
     align-content: center;
     gap: 10px;
+
+    .link {
+      font-family: var(--400);
+      font-size: 16px;
+      margin-top: 5px;
+    }
   }
 }
 
@@ -191,6 +197,13 @@ body.locked {
   justify-content: center;
   align-items: center;
   align-content: center;
+  max-width: 220px;
+  margin: 0 auto;
+  margin-top: -140px;
+  margin-bottom: 20px;
+  img {
+    width: 100%;
+  }
 }
 
 #faq {
@@ -274,5 +287,55 @@ body.locked {
 
   .form {
     padding: 30px 40px;
+  }
+}
+
+.register-check-list {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--400);
+  li {
+    position: relative;
+    padding-left: 40px;
+    font-size: 16px;
+    ul {
+      display: flex;
+      width: 100%;
+      flex-direction: column;
+      gap: 5px;
+      margin: 5px 0px;
+    }
+    li {
+      padding-left: 0px;
+      list-style: disc;
+      list-style-position: inside;
+    }
+    img {
+      position: absolute;
+      width: 32px;
+      height: 32px;
+      left: 0px;
+      top: -5px;
+    }
+  }
+}
+
+.example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+  img {
+    width: 100%;
+  }
+
+  span {
+    font-size: 16px;
   }
 }

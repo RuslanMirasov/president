@@ -211,3 +211,12 @@ a {
     mask-size: 100% 100%;
   }
 }
+
+.link {
+  color: var(--yellow);
+  text-decoration: underline;
+  cursor: pointer;
+  &.link--white {
+    color: var(--white);
+  }
+}

@@ -493,6 +493,15 @@ a {
   mask-size: 100% 100%;
 }
 
+.link {
+  color: var(--yellow);
+  text-decoration: underline;
+  cursor: pointer;
+}
+.link.link--white {
+  color: var(--white);
+}
+
 .body {
   display: flex;
   flex-direction: column;
@@ -933,6 +942,12 @@ a {
   padding: 4px 24px;
   border-radius: 12px;
 }
+.button.button--submit {
+  font-size: 20px;
+  min-height: 54px;
+  padding: 4px 24px;
+  border-radius: 16px;
+}
 .button:before, .button:after {
   content: "";
   position: absolute;
@@ -1144,7 +1159,11 @@ a {
   position: relative;
   overflow: hidden;
   height: 0px;
+  opacity: 0;
   transition: 0.3s;
+}
+.tab.active {
+  opacity: 1;
 }
 
 .memory-preview {
@@ -1252,11 +1271,33 @@ a {
   --invalid: var(--yellow);
 }
 
+.form {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+}
+.form .link {
+  display: block;
+  font-family: var(--400);
+  font-size: 14px;
+  text-align: center;
+  margin: 0 auto;
+}
+.form .button--submit {
+  margin-bottom: 5px;
+}
+
 .label {
   display: block;
   width: 100%;
   position: relative;
   color: inherit;
+}
+.label .label__text {
+  font-size: 10px;
+  margin-bottom: 5px;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 .input-icon {
@@ -1384,7 +1425,7 @@ span.input-icon {
 .input.invalid,
 .textarea.invalid {
   border: 1px solid var(--invalid);
-  color: var(--invalid);
+  color: var(--bg-dark);
 }
 .input.invalid + .input-icon,
 .textarea.invalid + .input-icon {
@@ -1432,44 +1473,45 @@ textarea {
 .checkbox {
   display: none;
 }
-.radio + span,
-.checkbox + span {
+.radio + .label__text,
+.checkbox + .label__text {
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   position: relative;
   width: 100%;
   font-family: var(--400);
-  padding-left: 46px;
-  font-size: 12px;
+  padding: 10px 0px;
+  padding-left: 40px;
+  font-size: 14px;
   line-height: 1.1;
   color: inherit;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 8px;
 }
-.radio + span a,
-.checkbox + span a {
+.radio + .label__text a,
+.checkbox + .label__text a {
   display: inline;
-  font-size: 12px;
-  text-decoration: underline;
   width: auto;
-  color: var(--black);
+  margin: 0;
 }
-.radio + span:before,
-.checkbox + span:before {
+.radio + .label__text:before,
+.checkbox + .label__text:before {
   content: "";
   display: block;
   position: absolute;
   left: 0px;
+  top: 4px;
   width: 26px;
   height: 26px;
-  border: 1px solid var(--black);
-  background: #f1f1f1;
+  border-radius: 6px;
+  border: 2px solid var(--white);
+  background: rgba(0, 0, 0, 0);
   transition: border 0.3s;
 }
 .radio:checked + span:before,
 .checkbox:checked + span:before {
-  background: #f1f1f1 url("../img/svg/checkbox.svg") no-repeat center center;
+  background: var(--white) url("../img/svg/checkbox.svg") no-repeat center center;
   background-size: 60% 60%;
 }
 .radio.invalid + span,
@@ -1502,6 +1544,8 @@ textarea {
   color: var(--invalid);
   font-size: 14px;
   font-family: var(--400);
+  z-index: 10;
+  pointer-events: none;
 }
 .inputError span {
   display: inline-block;
@@ -1780,7 +1824,7 @@ body.locked {
   font-family: var(--4);
   margin-bottom: 24px;
 }
-.popup-title.white {
+.popup-title.popup-title--white {
   font-size: 24px;
   font-family: var(--400);
   color: var(--white);
@@ -1822,6 +1866,11 @@ body.locked {
   align-content: center;
   gap: 10px;
 }
+.red-wrapper .buttons .link {
+  font-family: var(--400);
+  font-size: 16px;
+  margin-top: 5px;
+}
 
 .popup-image {
   display: flex;
@@ -1830,6 +1879,13 @@ body.locked {
   justify-content: center;
   align-items: center;
   align-content: center;
+  max-width: 220px;
+  margin: 0 auto;
+  margin-top: -140px;
+  margin-bottom: 20px;
+}
+.popup-image img {
+  width: 100%;
 }
 
 #faq {
@@ -1929,6 +1985,55 @@ body.locked {
 }
 #login .form {
   padding: 30px 40px;
+}
+
+.register-check-list {
+  display: flex;
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  flex-direction: column;
+  gap: 20px;
+  font-family: var(--400);
+}
+.register-check-list li {
+  position: relative;
+  padding-left: 40px;
+  font-size: 16px;
+}
+.register-check-list li ul {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 5px;
+  margin: 5px 0px;
+}
+.register-check-list li li {
+  padding-left: 0px;
+  list-style: disc;
+  list-style-position: inside;
+}
+.register-check-list li img {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 0px;
+  top: -5px;
+}
+
+.example {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 10px;
+}
+.example img {
+  width: 100%;
+}
+.example span {
+  font-size: 16px;
 }
 
 .section--hero {
