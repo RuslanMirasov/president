@@ -4,6 +4,7 @@ import { initSliders } from './sliders.js';
 import { initScrollToBlock } from './scrollToBlock.js';
 import { initAccordeons } from './accordeon.js';
 import { initTabs } from './tabs.js';
+import { initMamoryGame } from './memoryGame.js';
 
 popup.init();
 window.popup = popup;
@@ -13,6 +14,7 @@ fixHeaderOnScroll();
 initScrollToBlock();
 initAccordeons();
 initTabs();
+initMamoryGame();
 
 setTimeout(() => {
   hidePreloader();

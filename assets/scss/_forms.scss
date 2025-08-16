@@ -103,6 +103,7 @@ span.input-icon {
   &.input-search {
     padding-right: var(--input-height);
     width: 100%;
+    max-width: 100%;
     height: 56px;
     border-radius: 16px;
     font-family: var(--4);

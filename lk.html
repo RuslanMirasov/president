@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
-    <title>President</title>
+    <title>President | Личный кабинет</title>
   </head>
   <body class="body">
     <!--PRELOADER-->
@@ -36,7 +36,7 @@
             <li><a class="menu__link" data-popup-open="faq">Частые вопросы</a></li>
             <li class="header__buttons">
               <button class="button button--small" data-popup-open="cheque"><span>Загрузить чек</span></button>
-              <button class="login-btn" data-popup-open="login"><span>Вход</span></button>
+              <a href="./lk.html" class="login-btn"><span>Профиль</span></a>
             </li>
           </ul>
         </nav>
@@ -48,344 +48,181 @@
     </header>
 
     <main class="main">
-      <!--HERO-->
-      <section class="section section--hero border-bottom">
-        <div class="hero-background" data-fix-bg>
-          <img src="./assets/img/hero-bg.webp" alt="" />
-        </div>
-
+      <section class="section section--lk border-bottom">
         <div class="container">
-          <h1 class="title title--hero">
-            <span>Твоё <span class="underline">настоящее</span></span>
-            <span>удовольствие</span>
-          </h1>
-
-          <div class="main-prize">
-            <span>Главный приз</span>
-            <p>Выбери своё <br />путешествие</p>
-          </div>
-
-          <img src="./assets/img/hero-center-image.webp" alt="" class="hero-center-image" />
-
-          <a href="#about" data-scrollto class="scroll-down"></a>
-        </div>
-      </section>
-
-      <section class="section section--chees">
-        <div class="container">
-          <div class="hero-chees">
-            <img src="./assets/img/hero-chees.webp" alt="" />
-            <div class="effect"></div>
-          </div>
-        </div>
-      </section>
-
-      <!--ABOUT-->
-      <section class="section section--about" id="about">
-        <div class="container">
-          <ul class="numbered-list about-list">
+          <!--LK Head-->
+          <ul class="lk-head">
             <li>
-              <h3 class="title title--h3">Покупай</h3>
-              <p>сыр с&nbsp;благородной <br />плесенью President</p>
-            </li>
-            <li>
-              <h3 class="title title--h3">ЗАРЕГИСТРИРУЙ</h3>
-              <p>
-                чек на&nbsp;сайте и&nbsp;получи <br />гарантированный приз
-                <span class="yandex-small">
-                  <img src="./assets/img/yandex-small.webp" alt="" />
-                  <span class="blik blik--yandex"></span>
-                </span>
-              </p>
-              <button class="button" data-popup-open="cheque"><span>ЗАГРУЗИТЬ ЧЕК</span></button>
-            </li>
-            <li>
-              <h3 class="title title--h3">Участвуй <br />в&nbsp;розыгрыше <br />призов</h3>
-              <p>для&nbsp;твоего удовольствия</p>
-            </li>
-            <li>
-              <h3 class="title title--h3">Играй в&nbsp;игру <br />Мемори</h3>
-              <p>и&nbsp;участвуй в&nbsp;розыгрыше <br />специального приза</p>
-              <button class="button" data-popup-open="memory"><span>ИГРАТЬ</span></button>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!--MAIN PRIZ-->
-      <section class="section section--mainprize border-bottom border-top">
-        <div class="container">
-          <h2 class="title">
-            <span>Главный приз</span>
-            путешествие в своё удовольствие!
-          </h2>
-
-          <p class="mainprize"><span>500 000₽</span></p>
-        </div>
-      </section>
-
-      <!--WEEK PRIZES-->
-      <section
-        class="section section--weekprize"
-        data-slider
-        data-slides-per-view="3,3,1"
-        data-slides-per-group="1,1,1"
-        data-space-between="24,20,20"
-        data-centered="true"
-        data-initial-slide="1,1,0"
-      >
-        <div class="container">
-          <h2 class="title title--h2 yellow">Еженедельные призы</h2>
-
-          <div class="swiper swiper--weekprize">
-            <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/otello.webp" alt="otello" />
-                  <p>Сертификат Оттелло</p>
-                </div>
+              <h1 class="lk-head__title">Константинопольский Пантелеймон Александрович</h1>
+              <div class="contacts">
+                <p>E-mail: <a href="mailto:panteleymon@gmail.ru">panteleymon@gmail.ru</a></p>
+                <p>Телефон: <a href="tel:+790090000">+7 900 900 00</a></p>
               </div>
 
-              <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/cuva.webp" alt="cuva" />
-                  <p>Сертификат Cuva</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/cozy-home.webp" alt="cozy-home" />
-                  <p>Сертификат Cozy Home</p>
-                </div>
-              </div>
-
-              <!-- <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/yandex-plus.webp" alt="yandex-plus" />
-                  <p>Сертификат Яндекс плюс</p>
-                </div>
-              </div> -->
-
-              <!-- <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/ozon-500.webp" alt="ozon" />
-                  <p>Сертификат Ozon</p>
-                </div>
-              </div> -->
-
-              <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/ozon-20000.webp" alt="ozon" />
-                  <p>Сертификат Ozon</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/ozon-30000.webp" alt="ozon" />
-                  <p>Сертификат Ozon</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/m-video.webp" alt="m-video" />
-                  <p>Сертификат М.Видео</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/m-video-15000.webp" alt="m-video" />
-                  <p>Сертификат М.Видео</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/hoff.webp" alt="hoff" />
-                  <p>Сертификат Hoff</p>
-                </div>
-              </div>
-
-              <!-- <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/500000.webp" alt="500000" />
-                  <p>Сертификат на 500 000₽</p>
-                </div>
-              </div> -->
-            </div>
-
-            <button class="swiper-arrow" data-arrow-prev></button>
-            <button class="swiper-arrow" data-arrow-next></button>
-          </div>
-        </div>
-      </section>
-
-      <!--GARANTY PRIZES-->
-      <section class="section section--garanty border-top-red">
-        <div class="container">
-          <h2 class="title title--h2 yellow">Гарантированные призы</h2>
-
-          <ul class="garanty-prizes">
-            <li>
-              <article>
-                <div class="image">
-                  <span class="yandex-big">
-                    <img src="./assets/img/yandex-big.webp" alt="" />
-                    <span class="blik blik--yandex"></span>
-                  </span>
-                </div>
-                <p>Баллы Яндекс Плюс <span>за&nbsp;загрузку чеков</span></p>
-                <button class="button" data-popup-open="cheque"><span>ЗАГРУЗИТЬ ЧЕК</span></button>
-              </article>
-            </li>
-            <li>
-              <article>
-                <div class="image">
-                  <span class="ozon-big">
-                    <img src="./assets/img/ozon-big.webp" alt="" />
-                    <span class="blik blik--ozon"></span>
-                  </span>
-                </div>
-                <p>500&nbsp;₽ на&nbsp;Ozon <span>за&nbsp;прохождение игры</span></p>
-                <button class="button" data-popup-open="memory"><span>ИГРАТЬ</span></button>
-              </article>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <!--WINNERS-->
-      <section class="section section--winners border-top-invers border-bottom">
-        <div class="container">
-          <h2 class="title title--h2 yellow">Победители</h2>
-
-          <!--filters-->
-          <div class="winners-filters">
-            <!--select-->
-            <label class="label">
-              <select name="week" class="input input--select placeholder" required>
-                <option value="" disabled="" selected="" hidden="">Неделя 1</option>
-                <option value="Неделя 1">Неделя 1</option>
-                <option value="Неделя 2">Неделя 2</option>
-                <option value="Неделя 3">Неделя 3</option>
-              </select>
-              <span class="input-icon">
-                <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M13.1569 1.65685L7.1007 7.71301L1.44385 2.05615" stroke="black" stroke-width="2" />
-                </svg>
-              </span>
-            </label>
-
-            <!--Логика отправки формы поиска (для примера)-->
-            <script>
-              function onSearchFormSubmit(e) {
-                e.preventDefault();
-                alert('Форма поиска отправлена');
-                e.target.reset();
-              }
-            </script>
-
-            <!--search-->
-            <form action="#" class="form" novalidate onsubmit="onSearchFormSubmit(event)">
-              <label>
-                <input type="tel" name="search" class="input input-search" placeholder="Поиск по телефону" autocomplete="off" required />
-              </label>
-
-              <button type="submit">
-                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <button type="button" class="logout-button">
+                <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path
-                    d="M9.28711 17C13.7054 17 17.2871 13.4183 17.2871 9C17.2871 4.58172 13.7054 1 9.28711 1C4.86883 1 1.28711 4.58172 1.28711 9C1.28711 13.4183 4.86883 17 9.28711 17Z"
+                    d="M20 8.29414H12M5 15.4064C2.79086 15.4064 1 13.8143 1 11.8503V4.73801C1 2.77402 2.79086 1.18188 5 1.18188M5 15.4064C7.20914 15.4064 9 13.8143 9 11.8503V4.73801C9 2.77402 7.20914 1.18188 5 1.18188M5 15.4064H13C15.2091 15.4064 17 13.8143 17 11.8503M5 1.18188H13C15.2091 1.18188 17 2.77402 17 4.73801"
                     stroke="currentColor"
-                    stroke-width="2"
+                    stroke-width="1.5"
                     stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                  <path d="M19.287 19L14.937 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-              </button>
-            </form>
-          </div>
-
-          <!--WINNERS TABLE-->
-          <table class="table">
-            <thead>
-              <tr>
-                <th>Дата</th>
-                <th>Имя</th>
-                <th>Контакт</th>
-                <th>Приз</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>дд.мм.гггг</td>
-                <td>Пантелеймон Р.</td>
-                <td>+XXXXXXXX***</td>
-                <td>Баллы Яндекс Плюс</td>
-              </tr>
-              <tr>
-                <td>дд.мм.гггг</td>
-                <td>Константин Д.</td>
-                <td>+XXXXXXXX***</td>
-                <td>500 ₽ на Ozon</td>
-              </tr>
-              <tr>
-                <td>дд.мм.гггг</td>
-                <td>Лера В.</td>
-                <td>+XXXXXXXX***</td>
-                <td>Сертификат Cozy Home</td>
-              </tr>
-              <tr>
-                <td>дд.мм.гггг</td>
-                <td>Антонина Н.</td>
-                <td>+XXXXXXXX***</td>
-                <td>Сертификат Cozy Home</td>
-              </tr>
-              <tr>
-                <td>дд.мм.гггг</td>
-                <td>Елизавета Т.</td>
-                <td>+XXXXXXXX***</td>
-                <td>Сертификат Cozy Home</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <!--PAGINATION-->
-          <ul class="pagination">
-            <li>
-              <button href="#" class="pagination-btn prev" disabled>
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M7.27783 1.48193L1.35191 7.90169L7.27783 14.3214"
-                    stroke="#CC0102"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
                   />
                 </svg>
               </button>
             </li>
-            <li><a href="#" class="pagination-btn active">1</a></li>
-            <li><a href="#" class="pagination-btn">2</a></li>
-            <li><a href="#" class="pagination-btn">3</a></li>
-            <li><a href="#" class="pagination-btn">4</a></li>
             <li>
-              <button class="pagination-btn next">
-                <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M1.72217 14.519L7.64809 8.09929L1.72217 1.67954"
-                    stroke="#CC0102"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-              </button>
+              <b class="lk-head__title">Найди пары</b>
+              <p>
+                Для&nbsp;ежедневного розыгрыша специального приза понадобятся чек&nbsp;и&nbsp;
+                <a class="link" data-popup-open="memory">пройденная игра</a>, которые не&nbsp;участвовали в&nbsp;предыдущие дни
+              </p>
             </li>
           </ul>
+
+          <!--Мои чеки-->
+          <div class="lk-content">
+            <h2 class="title title--h2">Мои чеки</h2>
+
+            <!-- <p class="subtitle">Загруженных чеков нет</p> -->
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>Дата</th>
+                  <th>Чек</th>
+                  <th>Статус</th>
+                  <th>Категория</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>дд.мм.гггг</td>
+                  <td>125 1234 123456</td>
+                  <td>Принят</td>
+                  <td>Отдых и релакс</td>
+                </tr>
+                <tr>
+                  <td>дд.мм.гггг</td>
+                  <td>125 1234 123456</td>
+                  <td>Принят</td>
+                  <td>Дом и уют</td>
+                </tr>
+                <tr>
+                  <td>дд.мм.гггг</td>
+                  <td>125 1234 123456</td>
+                  <td>Принят</td>
+                  <td>Техника и гаджеты</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!--PAGINATION-->
+            <ul class="pagination">
+              <li>
+                <button href="#" class="pagination-btn prev" disabled>
+                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.27783 1.48193L1.35191 7.90169L7.27783 14.3214"
+                      stroke="#CC0102"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </li>
+              <li><a href="#" class="pagination-btn active">1</a></li>
+              <li><a href="#" class="pagination-btn">2</a></li>
+              <li><a href="#" class="pagination-btn">3</a></li>
+              <li><a href="#" class="pagination-btn">4</a></li>
+              <li>
+                <button class="pagination-btn next">
+                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.72217 14.519L7.64809 8.09929L1.72217 1.67954"
+                      stroke="#CC0102"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+
+            <button type="button" class="button" data-popup-open="cheque"><span>ЗАГРУЗИТЬ ЧЕК</span></button>
+          </div>
+
+          <!--Мои призы-->
+          <div class="lk-content">
+            <h2 class="title title--h2">Мои призы</h2>
+
+            <!-- <p class="subtitle">Загрузи чек и участвуй <br />в&nbsp;розыгрыше призов</p> -->
+
+            <table class="table">
+              <thead>
+                <tr>
+                  <th colspan="2">Дата</th>
+                  <th>Приз</th>
+                  <th>Категория</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>дд.мм.гггг</td>
+                  <td><img src="./assets/img/prizes/ozon-500.webp" /></td>
+                  <td>Электронный сертификат «OZON» номиналом 500 (пятьсот) рублей</td>
+                  <td>Отдых и&nbsp;релакс</td>
+                </tr>
+                <tr>
+                  <td>дд.мм.гггг</td>
+                  <td><img src="./assets/img/prizes/cozy-home.webp" /></td>
+                  <td>Электронный сертификат «Cozy Home» номиналом 4&nbsp;000 рублей</td>
+                  <td>Дом и&nbsp;уют</td>
+                </tr>
+                <tr>
+                  <td>дд.мм.гггг</td>
+                  <td><img src="./assets/img/prizes/yandex-plus.webp" /></td>
+                  <td>Электронный сертификат Яндекс.Плюс на&nbsp;100 (сто) баллов</td>
+                  <td>Техника и&nbsp;гаджеты</td>
+                </tr>
+              </tbody>
+            </table>
+
+            <!--PAGINATION-->
+            <ul class="pagination">
+              <li>
+                <button href="#" class="pagination-btn prev" disabled>
+                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M7.27783 1.48193L1.35191 7.90169L7.27783 14.3214"
+                      stroke="#CC0102"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </li>
+              <li><a href="#" class="pagination-btn active">1</a></li>
+              <li><a href="#" class="pagination-btn">2</a></li>
+              <li><a href="#" class="pagination-btn">3</a></li>
+              <li><a href="#" class="pagination-btn">4</a></li>
+              <li>
+                <button class="pagination-btn next">
+                  <svg width="9" height="16" viewBox="0 0 9 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M1.72217 14.519L7.64809 8.09929L1.72217 1.67954"
+                      stroke="#CC0102"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                </button>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </main>

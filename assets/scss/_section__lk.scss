@@ -1,0 +1,140 @@
+.section--lk {
+  min-height: 100vh;
+  padding: 150px 0px;
+
+  .container {
+    max-width: 1020px;
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    gap: 100px;
+
+    .title--h2 {
+      color: var(--yellow);
+    }
+  }
+
+  .table {
+    margin-top: 10px;
+    //  table-layout: fixed;
+    tr {
+      th,
+      td {
+        &:first-child {
+          padding-left: 60px;
+        }
+        &:nth-child(3) {
+          white-space: initial;
+          max-width: 300px;
+        }
+        &:last-child {
+          padding-right: 60px;
+          max-width: 170px;
+          white-space: nowrap;
+        }
+      }
+    }
+    th {
+      border-bottom: 2px solid var(--yellow);
+    }
+
+    tbody {
+      td {
+        border-bottom: 1px solid var(--white);
+      }
+    }
+  }
+}
+
+.lk-head {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: space-between;
+  gap: 56px;
+
+  li {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+    width: calc((100% - 56px) / 2);
+    min-height: 295px;
+    border-radius: 24px;
+    position: relative;
+    overflow: hidden;
+    padding: 34px 68px 34px 34px;
+    background: var(--white);
+    color: var(--black);
+    &:last-child {
+      background: var(--white) url('../img/lk-bg.webp') no-repeat right 5px;
+      background-size: 210px auto;
+    }
+  }
+
+  .lk-head__title {
+    font-size: 30px;
+    text-transform: uppercase;
+    color: var(--bg);
+    line-height: 1.12;
+    margin-bottom: 20px;
+  }
+
+  .contacts {
+    display: flex;
+    position: relative;
+    width: 100%;
+    flex-direction: column;
+    gap: 14px;
+    p {
+      font-size: 20px;
+      a {
+        transition: 0.3s;
+        color: currentColor;
+        &:hover {
+          color: var(--bg);
+        }
+      }
+    }
+  }
+
+  a {
+    font-family: var(--4);
+  }
+
+  p {
+    font-size: 24px;
+    font-family: var(--4);
+    font-weight: 400;
+    line-height: 1.12;
+    .link {
+      color: var(--bg);
+    }
+  }
+}
+
+.lk-content {
+  width: 100%;
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-direction: column;
+
+  .subtitle {
+    display: block;
+    font-size: 24px;
+    font-family: var(--4);
+    text-align: center;
+    margin-top: 46px;
+  }
+
+  .button {
+    margin: 0 auto;
+    margin-top: 46px;
+  }
+}

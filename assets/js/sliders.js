@@ -1,4 +1,8 @@
+import { registerNamedSwiper } from './goToSlide.js';
+
 const sliders = document.querySelectorAll('[data-slider]');
+
+const toBool = s => String(s).toLowerCase() === 'true';
 
 export const initSliders = () => {
   if (sliders.length > 0) {
@@ -12,6 +16,8 @@ export const initSliders = () => {
         slidesPerGroup = '1,1,1',
         centered = false,
         initialSlide = '0,0,0',
+        direction = 'horizontal',
+        allowTouchMove = 'true',
       } = sliderWrapper.dataset;
 
       const arrowPrev = sliderWrapper.querySelector('[data-arrow-prev]');
@@ -19,11 +25,12 @@ export const initSliders = () => {
       const pagination = sliderWrapper.querySelector('[data-pagination]');
 
       const options = {
-        allowTouchMove: true,
+        allowTouchMove: toBool(allowTouchMove),
         effect,
         speed,
         centeredSlides: centered,
         centeredSlidesBounds: centered,
+        direction,
         breakpoints: {
           0: {
             slidesPerView: Number(slidesPerView.split(',')[2]),
@@ -61,7 +68,13 @@ export const initSliders = () => {
         };
       }
 
-      new Swiper(swiper, options);
+      const instance = new Swiper(swiper, options);
+
+      const rawKey = sliderWrapper.getAttribute('data-slider');
+      const key = rawKey && rawKey.trim();
+      if (key) {
+        registerNamedSwiper(key, instance);
+      }
     });
   }
 };
