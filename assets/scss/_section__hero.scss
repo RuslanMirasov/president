@@ -79,6 +79,9 @@
   background: var(--bg);
   overflow: visible;
   height: 70px;
+  .scroll-down {
+    display: none;
+  }
   .container {
     height: 100%;
   }
@@ -188,5 +191,124 @@
     border-radius: 12px;
     background: var(--yellow-light);
     position: absolute;
+  }
+}
+
+@media (max-width: 1279px) {
+  .section--hero {
+    .container {
+      padding-top: 170px;
+    }
+  }
+
+  .hero-background {
+    transform: translate(-26px, 0px);
+  }
+
+  .main-prize {
+    padding: 18px 60px;
+    span {
+      font-size: 12px;
+    }
+    p {
+      font-size: 24px;
+    }
+
+    &:before {
+      left: 28px;
+    }
+    &:after {
+      right: 28px;
+    }
+    &:before,
+    &:after {
+      width: 8px;
+      height: 8px;
+    }
+  }
+  .loaded {
+    .hero-chees {
+      transform: translate(-114%, 0%);
+    }
+  }
+  .hero-chees {
+    width: 45%;
+  }
+}
+
+@media (max-width: 767px) {
+  .section--hero {
+    &:before {
+      padding-top: 0%;
+      min-height: 650px;
+    }
+    .container {
+      padding-top: 90px;
+      max-width: 375px;
+    }
+  }
+
+  .section--chees {
+    pointer-events: none;
+    .container {
+      max-width: 375px;
+    }
+    .scroll-down {
+      display: block;
+      position: absolute;
+      z-index: 4;
+      pointer-events: all;
+    }
+  }
+
+  .hero-background {
+    transform: translate(-170px, 30px);
+  }
+
+  .main-prize {
+    padding: 18px 58px;
+    bottom: 14px;
+    transform: translate(10px, 0px);
+    span {
+      font-size: 9px;
+    }
+    p {
+      font-size: 20px;
+    }
+
+    &:before {
+      left: 28px;
+    }
+    &:after {
+      right: 28px;
+    }
+    &:before,
+    &:after {
+      width: 8px;
+      height: 8px;
+    }
+  }
+
+  .loaded {
+    .hero-chees {
+      transform: translate(-85%, -30px);
+    }
+  }
+
+  .hero-chees {
+    width: 220px;
+    transform: translate(-185%, -30px);
+  }
+
+  .hero-center-image {
+    position: absolute;
+    width: 338px;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-28%, 0%);
+  }
+
+  .scroll-down {
+    display: none;
   }
 }

@@ -36,3 +36,78 @@
     animation: pulse 2s linear infinite;
   }
 }
+
+@media (max-width: 1279px) {
+  .section--mainprize {
+    padding: 100px 0px;
+    background: url('../img/mainprize-bg.webp') no-repeat center top;
+    background-size: auto 100%;
+    background-attachment: fixed;
+
+    .title {
+      max-width: 550px;
+      font-size: 48px;
+      span {
+        font-size: 32px;
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .mainprize {
+    margin-top: 50px;
+    font-size: 150px;
+  }
+}
+
+@media (max-width: 767px) {
+  .section--mainprize {
+    z-index: 1;
+    padding: 0px;
+    height: 640px;
+    position: relative;
+    background: var(--black);
+    .container {
+      height: 100%;
+      display: flex;
+      position: relative;
+      width: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+    .fixed-bg {
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      width: 100%;
+      height: 640px;
+      z-index: 0;
+      pointer-events: none;
+      z-index: -1;
+      clip-path: inset(0);
+      background: url('../img/mainprize-bg-mobil.webp') no-repeat center center/cover;
+    }
+
+    &.fix {
+      .fixed-bg {
+        position: fixed;
+      }
+    }
+
+    .title {
+      max-width: 360px;
+      font-size: 30px;
+      span {
+        font-size: 18px;
+        padding-bottom: 5px;
+      }
+    }
+  }
+
+  .mainprize {
+    margin-top: 50px;
+    font-size: 82px;
+  }
+}
