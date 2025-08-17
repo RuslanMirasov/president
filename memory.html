@@ -71,7 +71,7 @@
                     Помни, для&nbsp;ежедневного розыгрыша понадобятся <br />чек&nbsp;и&nbsp;пройденная игра, которые не&nbsp;участвовали <br />
                     в&nbsp;предыдущие&nbsp;дни.
                   </p>
-                  <p class="subtitle">Специальный приз можно выиграть один&nbsp;раз.</p>
+                  <p class="subtitle">Специальный приз можно выиграть&nbsp;один&nbsp;раз.</p>
                 </div>
 
                 <button type="button" class="button" data-popup-open="cheque">ЗАГРУЗИТЬ ЧЕК</button>
@@ -400,12 +400,13 @@
             <h2 class="popup-title">Регистрация чека</h2>
 
             <!--cheque load form-->
-            <!-- <script>
+            <script>
               function onChequeLoadFormSubmit(e) {
                 e.preventDefault();
                 window.popup.open('cheque-success');
               }
             </script>
+
             <form class="form" enctype="multipart/form-data" novalidate onsubmit="onChequeLoadFormSubmit(event)">
               <div class="download-file">
                 <label class="label-for-file">
@@ -414,18 +415,15 @@
                   <p class="label__text" data-text="Перетащите фото чека или нажмите для выбора">Перетащите фото чека или нажмите для выбора</p>
                 </label>
               </div>
-            </form>
-            <button type="submit" class="button button--violet submit">
-              <span>Загрузить</span>
-            </button> -->
-            <!-- <div class="upload-error-message">Чек не выбран.</div> -->
 
-            <div class="buttons">
-              <button type="button" class="button button--submit full" data-popup-open="cheque-load">
-                <span>Загрузить</span>
-              </button>
-              <a href="#" class="link" data-popup-open="cheque-in-self">Ввести данные чека вручную</a>
-            </div>
+              <div class="buttons">
+                <button type="submit" class="button button--submit full">
+                  <span>Загрузить</span>
+                </button>
+
+                <a href="#" class="link" data-popup-open="cheque-in-self">Ввести данные чека вручную</a>
+              </div>
+            </form>
           </div>
         </div>
 

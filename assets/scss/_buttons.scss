@@ -28,6 +28,9 @@
   align-content: center;
   position: relative;
   font-size: 20px;
+  @media (max-width: 767px) {
+    font-size: 18px;
+  }
   line-height: 1;
   color: var(--black);
   padding: 10px 60px;
@@ -47,6 +50,12 @@
     min-height: 36px;
     padding: 4px 24px;
     border-radius: 12px;
+
+    @media (max-width: 767px) {
+      font-size: 24px;
+      min-height: 60px;
+      padding: 4px 32px;
+    }
   }
   &.button--submit {
     font-size: 20px;
@@ -80,10 +89,12 @@
     border-radius: 10px 0px 0px 10px;
   }
 
-  &:hover {
-    &:before,
-    &:after {
-      transform: translate(0%, 0%);
+  @media (min-width: 1024px) {
+    &:hover {
+      &:before,
+      &:after {
+        transform: translate(0%, 0%);
+      }
     }
   }
 }
@@ -111,6 +122,9 @@
     width: 24px;
     height: 25px;
     background: url('../img/svg/login.svg') no-repeat center center/cover;
+  }
+  @media (max-width: 767px) {
+    font-size: 24px;
   }
 }
 
@@ -144,5 +158,9 @@
   color: var(--black);
   &:hover {
     color: var(--bg);
+  }
+  @media (max-width: 767px) {
+    right: 10px;
+    bottom: 12px;
   }
 }

@@ -98,6 +98,10 @@ span.input-icon {
     font-size: 20px;
     padding-right: 56px;
     cursor: pointer;
+
+    @media (max-width: 1023px) {
+      font-size: 16px;
+    }
   }
 
   &.input-search {
@@ -113,10 +117,18 @@ span.input-icon {
     color: var(--white);
     font-family: var(--4);
     padding-left: 30px;
+
     &::placeholder {
       font-family: var(--4);
       color: var(--white);
       font-size: 20px;
+    }
+    @media (max-width: 1023px) {
+      font-size: 16px;
+      padding-left: 18px;
+      &::placeholder {
+        font-size: 16px;
+      }
     }
   }
 
@@ -297,47 +309,78 @@ select.open + .input-icon {
 }
 
 // INPUT FILE
-input[type='file'] {
+
+.download-file {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  margin-top: 0px;
+  margin-bottom: -10px;
+}
+
+.label-for-file {
+  width: 100%;
+  height: 200px;
+  border: 6px solid var(--yellow);
+  background-color: var(--black);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+  &.invalid {
+    border: 6px solid var(--invalid);
+  }
+}
+
+.input-file {
   display: none;
 }
 
-.label--forFile {
-  display: flex;
-  height: var(--input-height);
-  justify-content: center;
-  align-items: center;
-  align-content: center;
-  gap: 10px;
-  cursor: pointer;
-  color: var(--input-placeholder-color);
+.label-for-file img {
+  width: 40px;
+  height: 40px;
+  pointer-events: none;
+}
+
+.label-for-file .label__text {
+  font-size: 12px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 24px;
+  text-align: center;
+  max-width: 190px;
+  pointer-events: none;
+  .error {
+    color: var(--invalid);
+  }
+}
+
+.label-for-file img,
+.label-for-file .label__text {
   transition: 0.3s;
-  @media (max-width: 767px) {
-    margin-top: -10px;
-    margin-bottom: -10px;
-  }
+}
 
-  .file-placeholder {
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    word-break: break-word;
-    font-size: var(--input-font-size);
-    text-align: left;
-    line-height: 1;
-    transition: 0.3s;
-    max-width: 80%;
-  }
+.label-for-file.loaded img,
+.label-for-file.loaded .label__text {
+  opacity: 0;
+}
 
-  .invalid + .file-placeholder {
-    color: var(--invalid) !important;
-  }
+.label-for-file.loaded::after {
+  content: '';
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
 
-  &:hover {
-    color: var(--color);
-    .file-placeholder {
-      color: var(--color) !important;
-    }
-  }
+.label-for-file.loaded::after {
+  background-image: url('');
 }

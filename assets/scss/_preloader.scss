@@ -32,6 +32,9 @@
     align-items: center;
     align-content: center;
     transition: 1s;
+    @media (max-width: 1023px) {
+      width: 180px;
+    }
     img {
       position: absolute;
       width: 100%;

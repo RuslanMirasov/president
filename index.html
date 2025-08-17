@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/x-icon" href="./assets/img/favicon.ico" />
-    <meta name="theme-color" content="#1A2663" />
+    <meta name="theme-color" content="#CC0102" />
     <meta name="description" content="President" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -36,7 +36,7 @@
             <li><a class="menu__link" data-popup-open="faq">Частые вопросы</a></li>
             <li class="header__buttons">
               <button class="button button--small" data-popup-open="cheque"><span>Загрузить чек</span></button>
-              <button class="login-btn" data-popup-open="login"><span>Вход</span></button>
+              <button class="login-btn" data-popup-open="login"><span>Профиль</span></button>
             </li>
           </ul>
         </nav>
@@ -81,7 +81,7 @@
       </section>
 
       <!--ABOUT-->
-      <section class="section section--about" id="about">
+      <!-- <section class="section section--about" id="about">
         <div class="container">
           <ul class="numbered-list about-list">
             <li>
@@ -110,10 +110,10 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--MAIN PRIZ-->
-      <section class="section section--mainprize border-bottom border-top">
+      <!-- <section class="section section--mainprize border-bottom border-top">
         <div class="container">
           <h2 class="title">
             <span>Главный приз</span>
@@ -122,10 +122,10 @@
 
           <p class="mainprize"><span>500 000₽</span></p>
         </div>
-      </section>
+      </section> -->
 
       <!--WEEK PRIZES-->
-      <section
+      <!-- <section
         class="section section--weekprize"
         data-slider
         data-slides-per-view="3,3,1"
@@ -159,20 +159,6 @@
                   <p>Сертификат Cozy Home</p>
                 </div>
               </div>
-
-              <!-- <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/yandex-plus.webp" alt="yandex-plus" />
-                  <p>Сертификат Яндекс плюс</p>
-                </div>
-              </div> -->
-
-              <!-- <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/ozon-500.webp" alt="ozon" />
-                  <p>Сертификат Ozon</p>
-                </div>
-              </div> -->
 
               <div class="swiper-slide">
                 <div class="weekprize">
@@ -208,23 +194,16 @@
                   <p>Сертификат Hoff</p>
                 </div>
               </div>
-
-              <!-- <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/500000.webp" alt="500000" />
-                  <p>Сертификат на 500 000₽</p>
-                </div>
-              </div> -->
             </div>
 
             <button class="swiper-arrow" data-arrow-prev></button>
             <button class="swiper-arrow" data-arrow-next></button>
           </div>
         </div>
-      </section>
+      </section> -->
 
       <!--GARANTY PRIZES-->
-      <section class="section section--garanty border-top-red">
+      <!-- <section class="section section--garanty border-top-red">
         <div class="container">
           <h2 class="title title--h2 yellow">Гарантированные призы</h2>
 
@@ -255,16 +234,14 @@
             </li>
           </ul>
         </div>
-      </section>
+      </section> -->
 
       <!--WINNERS-->
       <section class="section section--winners border-top-invers border-bottom">
         <div class="container">
           <h2 class="title title--h2 yellow">Победители</h2>
 
-          <!--filters-->
           <div class="winners-filters">
-            <!--select-->
             <label class="label">
               <select name="week" class="input input--select placeholder" required>
                 <option value="" disabled="" selected="" hidden="">Неделя 1</option>
@@ -279,7 +256,6 @@
               </span>
             </label>
 
-            <!--Логика отправки формы поиска (для примера)-->
             <script>
               function onSearchFormSubmit(e) {
                 e.preventDefault();
@@ -288,7 +264,6 @@
               }
             </script>
 
-            <!--search-->
             <form action="#" class="form" novalidate onsubmit="onSearchFormSubmit(event)">
               <label>
                 <input type="tel" name="search" class="input input-search" placeholder="Поиск по телефону" autocomplete="off" required />
@@ -309,7 +284,6 @@
             </form>
           </div>
 
-          <!--WINNERS TABLE-->
           <table class="table">
             <thead>
               <tr>
@@ -353,7 +327,6 @@
             </tbody>
           </table>
 
-          <!--PAGINATION-->
           <ul class="pagination">
             <li>
               <button href="#" class="pagination-btn prev" disabled>
@@ -654,12 +627,13 @@
             <h2 class="popup-title">Регистрация чека</h2>
 
             <!--cheque load form-->
-            <!-- <script>
+            <script>
               function onChequeLoadFormSubmit(e) {
                 e.preventDefault();
                 window.popup.open('cheque-success');
               }
             </script>
+
             <form class="form" enctype="multipart/form-data" novalidate onsubmit="onChequeLoadFormSubmit(event)">
               <div class="download-file">
                 <label class="label-for-file">
@@ -668,18 +642,15 @@
                   <p class="label__text" data-text="Перетащите фото чека или нажмите для выбора">Перетащите фото чека или нажмите для выбора</p>
                 </label>
               </div>
-            </form>
-            <button type="submit" class="button button--violet submit">
-              <span>Загрузить</span>
-            </button> -->
-            <!-- <div class="upload-error-message">Чек не выбран.</div> -->
 
-            <div class="buttons">
-              <button type="button" class="button button--submit full" data-popup-open="cheque-load">
-                <span>Загрузить</span>
-              </button>
-              <a href="#" class="link" data-popup-open="cheque-in-self">Ввести данные чека вручную</a>
-            </div>
+              <div class="buttons">
+                <button type="submit" class="button button--submit full">
+                  <span>Загрузить</span>
+                </button>
+
+                <a href="#" class="link" data-popup-open="cheque-in-self">Ввести данные чека вручную</a>
+              </div>
+            </form>
           </div>
         </div>
 

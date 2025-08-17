@@ -35,7 +35,7 @@ const validationRegEx = [
   },
   {
     type: 'file',
-    error: 'Файл не выбран!',
+    error: 'Фото не выбрано!',
   },
   {
     name: 'name',
@@ -52,10 +52,26 @@ const validateInput = input => {
     return false;
   };
 
-  const { name, value, checked, type } = input;
+  const { name, value, checked, type, files } = input;
 
   if (type === 'file') {
-    return validateFile(input);
+    const errorEl = input.closest('.label-for-file').querySelector('.label__text');
+    const file = files[0];
+    const maxSize = 3 * 1024 * 1024;
+    const allowedTypes = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/bmp', 'image/tiff'];
+    if (!file) {
+      errorEl.innerHTML = `<span class="error">Фото не выбрано!</span>`;
+      return false;
+    }
+    if (!allowedTypes.includes(file.type)) {
+      errorEl.innerHTML = `<span class="error">Не верный формат файла!</span>`;
+      return false;
+    }
+    if (file.size > maxSize) {
+      resetFile(input.closest('.label-for-file'));
+      errorEl.innerHTML = `<span class="error">Файл больше 3MB!</span>`;
+      return false;
+    }
   }
 
   if ((type === 'checkbox' || type === 'radio') && !checked) {
@@ -191,10 +207,6 @@ document.addEventListener('change', e => {
   if (e.target.type === 'checkbox') {
     validateInput(e.target);
   }
-
-  if (e.target.type === 'file') {
-    validateFile(e.target);
-  }
 });
 
 document.addEventListener(
@@ -296,60 +308,81 @@ Object.entries(telHandlers).forEach(([eventName, handler]) => {
 });
 
 // INPUT TYPE FILE
-function validateFile(input) {
-  const label = input.closest('label');
-  const placeholderEl = label.querySelector('.file-placeholder');
-  const allowedTypes = [
-    'image/jpeg',
-    'image/png',
-    'image/gif',
-    'image/webp',
-    'image/bmp',
-    'image/tiff',
-    'application/pdf',
-    'application/msword',
-    'application/vnd.openxmlformats-officedocument.wordprocessingml.document',
-    'application/vnd.ms-excel',
-    'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet',
-    'application/vnd.ms-powerpoint',
-    'application/vnd.openxmlformats-officedocument.presentationml.presentation',
-    'application/rtf',
-    'text/plain',
-    'application/vnd.oasis.opendocument.text',
-    'application/vnd.oasis.opendocument.spreadsheet',
-  ];
-  const maxFileSize = 3 * 1024 * 1024; // 3 МБ
-  const { files } = input;
-  const file = files[0];
 
-  if (!file) {
-    placeholderEl.textContent = 'ПРИКРЕПИТЕ ФАЙЛ';
-    if (input.required) {
-      input.classList.add('invalid');
-      return false;
+const handleFile = (file, label) => {
+  const downloadFile = label.closest('.download-file');
+  if (file) {
+    const validFormats = ['image/jpeg', 'image/png', 'image/gif', 'image/webp', 'image/bmp', 'image/tiff'];
+
+    if (validFormats.includes(file.type)) {
+      const reader = new FileReader();
+      reader.onload = function (e) {
+        label.classList.add('loaded');
+        label.style.setProperty('--uploaded-image', `url(${e.target.result})`);
+        label.style.background = `#ffffff url(${e.target.result}) no-repeat center center/cover`;
+
+        // Добавляем кнопку сброса после загрузки изображения
+        const existingResetButton = downloadFile.querySelector('.file-reset');
+        if (!existingResetButton) {
+          const resetButton = document.createElement('button');
+          resetButton.type = 'button';
+          resetButton.classList.add('file-reset');
+          downloadFile.appendChild(resetButton);
+
+          // Обработчик для кнопки сброса
+          resetButton.addEventListener('click', function () {
+            resetFile(label);
+          });
+        }
+      };
+      reader.readAsDataURL(file);
+    } else {
+      label.querySelector('.label__text').innerHTML = `<span class="error">Не верный формат файла!</span>`;
     }
-    placeholderEl.style.color = 'var(--input-placeholder-color)';
-    input.classList.remove('invalid');
-    return false;
+  } else {
+    resetFile(label);
   }
+};
 
-  if (!allowedTypes.includes(file.type)) {
-    placeholderEl.textContent = 'Недопустимый формат';
-    input.classList.add('invalid');
-    return false;
+const resetFile = label => {
+  const inputFile = label.querySelector('.input-file');
+  const downloadFile = label.closest('.download-file');
+  const labelDefaultText = label.querySelector('.label__text').dataset.text;
+
+  label.classList.remove('loaded');
+  label.style.background = '';
+  label.querySelector('.label__text').innerHTML = labelDefaultText;
+
+  inputFile.value = '';
+  const resetButton = downloadFile.querySelector('.file-reset');
+  if (resetButton) {
+    resetButton.remove();
   }
+};
 
-  if (file.size > maxFileSize) {
-    placeholderEl.textContent = 'Файл слишком большой (макс. 3 МБ)';
-    input.classList.add('invalid');
-    return false;
-  }
+const fileEvents = {
+  dragover(event) {
+    if (event.target.classList.contains('label-for-file')) {
+      event.preventDefault();
+    }
+  },
+  drop(event) {
+    if (event.target.classList.contains('label-for-file')) {
+      event.preventDefault();
+      handleFile(event.dataTransfer.files[0], event.target);
+    }
+  },
+  change(event) {
+    if (event.target.classList.contains('input-file')) {
+      const label = event.target.closest('.label-for-file');
+      handleFile(event.target.files[0], label);
+    }
+  },
+};
 
-  placeholderEl.textContent = file.name;
-  placeholderEl.style.color = 'var(--color)';
-  input.classList.remove('invalid');
-  return true;
-}
+Object.entries(fileEvents).forEach(([eventName, handler]) => {
+  document.addEventListener(eventName, handler, false);
+});
 
 // SUBMIT MIDDLEWARE
 document.addEventListener(

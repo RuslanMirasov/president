@@ -105,4 +105,8 @@
   img {
     height: 100%;
   }
+  @media (max-width: 767px) {
+    width: 430px;
+    height: 220px;
+  }
 }

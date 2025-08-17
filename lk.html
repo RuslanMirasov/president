@@ -60,7 +60,14 @@
               </div>
 
               <button type="button" class="logout-button">
-                <svg width="21" height="17" viewBox="0 0 21 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="22" height="17" viewBox="0 0 22 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19 10.0721L20.1594 9.04144C20.6068 8.64365 20.6068 7.94451 20.1594 7.54672L19 6.51601"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
                   <path
                     d="M20 8.29414H12M5 15.4064C2.79086 15.4064 1 13.8143 1 11.8503V4.73801C1 2.77402 2.79086 1.18188 5 1.18188M5 15.4064C7.20914 15.4064 9 13.8143 9 11.8503V4.73801C9 2.77402 7.20914 1.18188 5 1.18188M5 15.4064H13C15.2091 15.4064 17 13.8143 17 11.8503M5 1.18188H13C15.2091 1.18188 17 2.77402 17 4.73801"
                     stroke="currentColor"
@@ -491,12 +498,13 @@
             <h2 class="popup-title">Регистрация чека</h2>
 
             <!--cheque load form-->
-            <!-- <script>
+            <script>
               function onChequeLoadFormSubmit(e) {
                 e.preventDefault();
                 window.popup.open('cheque-success');
               }
             </script>
+
             <form class="form" enctype="multipart/form-data" novalidate onsubmit="onChequeLoadFormSubmit(event)">
               <div class="download-file">
                 <label class="label-for-file">
@@ -505,18 +513,15 @@
                   <p class="label__text" data-text="Перетащите фото чека или нажмите для выбора">Перетащите фото чека или нажмите для выбора</p>
                 </label>
               </div>
-            </form>
-            <button type="submit" class="button button--violet submit">
-              <span>Загрузить</span>
-            </button> -->
-            <!-- <div class="upload-error-message">Чек не выбран.</div> -->
 
-            <div class="buttons">
-              <button type="button" class="button button--submit full" data-popup-open="cheque-load">
-                <span>Загрузить</span>
-              </button>
-              <a href="#" class="link" data-popup-open="cheque-in-self">Ввести данные чека вручную</a>
-            </div>
+              <div class="buttons">
+                <button type="submit" class="button button--submit full">
+                  <span>Загрузить</span>
+                </button>
+
+                <a href="#" class="link" data-popup-open="cheque-in-self">Ввести данные чека вручную</a>
+              </div>
+            </form>
           </div>
         </div>
 

@@ -36,6 +36,7 @@
   form {
     width: 100%;
     max-width: 346px;
+    position: relative;
     label {
       position: relative;
       width: 100%;
@@ -92,9 +93,6 @@
       font-family: var(--5);
       font-size: 20px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      @media (max-width: 767px) {
-        font-size: 10px;
-      }
       line-height: 1.1;
     }
   }
@@ -146,6 +144,52 @@
     &:disabled {
       opacity: 0.3;
       pointer-events: none;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .section--winners {
+    padding: 80px 0px;
+    background: #000102 url('../img/winners.webp') no-repeat center top;
+    background-size: auto 100svh;
+    background-attachment: fixed;
+  }
+
+  .winners-filters {
+    width: 100%;
+    gap: 12px;
+    margin: 30px auto 40px auto;
+
+    > .label {
+      max-width: 100%;
+      position: relative;
+    }
+  }
+
+  .table {
+    tr {
+      th,
+      td {
+        padding: 8px 6px;
+        height: 40px;
+        &:first-child {
+          min-width: 10px;
+        }
+        img {
+          width: 44px;
+        }
+      }
+    }
+    th {
+      font-size: 12px;
+      line-height: 1.1;
+    }
+
+    tbody {
+      td {
+        font-size: 12px;
+      }
     }
   }
 }
