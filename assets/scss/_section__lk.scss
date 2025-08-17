@@ -22,6 +22,10 @@
       max-width: 1060px;
     }
 
+    @media (max-width: 1279px) {
+      max-width: 800px;
+    }
+
     @media (max-width: 767px) {
       max-width: 450px;
       gap: 60px;
@@ -39,7 +43,7 @@
       td {
         &:first-child {
           padding-left: 60px;
-          @media (max-width: 1023px) {
+          @media (max-width: 1279px) {
             padding-left: 20px;
           }
           @media (max-width: 767px) {
@@ -54,13 +58,21 @@
           padding-right: 60px;
           max-width: 170px;
           white-space: nowrap;
-          @media (max-width: 1023px) {
+          @media (max-width: 1279px) {
             padding-right: 20px;
+            white-space: initial;
           }
           @media (max-width: 767px) {
             padding-right: 0px;
             white-space: initial;
           }
+        }
+        @media (max-width: 1279px) {
+          padding: 10px 15px;
+        }
+
+        @media (max-width: 1023px) {
+          padding: 8px 6px;
         }
       }
     }
@@ -200,6 +212,10 @@
   position: relative;
   width: 100%;
   flex-direction: column;
+  @media (max-width: 1023px) {
+    max-width: 450px;
+    margin: 0 auto;
+  }
 
   .subtitle {
     display: block;

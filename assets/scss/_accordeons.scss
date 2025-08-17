@@ -22,6 +22,9 @@
     font-size: 20px;
     text-transform: uppercase;
     cursor: pointer;
+    @media (max-width: 767px) {
+      font-size: 16px;
+    }
 
     &:before {
       content: '';
@@ -63,6 +66,9 @@
         font-size: 16px;
         line-height: 18px;
         font-family: var(--4);
+        @media (max-width: 767px) {
+          font-size: 15px;
+        }
       }
 
       ul {

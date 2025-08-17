@@ -7,6 +7,9 @@
 
   .container {
     max-width: 868px;
+    @media (max-width: 1023px) {
+      max-width: 450px;
+    }
   }
 }
 
@@ -23,6 +26,10 @@
 
   > .label {
     max-width: 240px;
+    @media (max-width: 1023px) {
+      width: 100%;
+      max-width: 100%;
+    }
     .input-icon {
       height: 56px;
       width: 56px;
@@ -37,6 +44,9 @@
     width: 100%;
     max-width: 346px;
     position: relative;
+    @media (max-width: 1023px) {
+      max-width: 100%;
+    }
     label {
       position: relative;
       width: 100%;

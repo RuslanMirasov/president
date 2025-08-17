@@ -1265,6 +1265,11 @@ a {
   text-transform: uppercase;
   cursor: pointer;
 }
+@media (max-width: 767px) {
+  .accordeon .question {
+    font-size: 16px;
+  }
+}
 .accordeon .question:before {
   content: "";
   width: 50px;
@@ -1304,6 +1309,12 @@ a {
   font-size: 16px;
   line-height: 18px;
   font-family: var(--4);
+}
+@media (max-width: 767px) {
+  .accordeon .answer .answer__content p,
+.accordeon .answer .answer__content li {
+    font-size: 15px;
+  }
 }
 .accordeon .answer .answer__content ul {
   display: flex;
@@ -2190,7 +2201,7 @@ body.locked {
 }
 @media (max-width: 767px) {
   .red-wrapper {
-    padding: 50px 20px 20px 20px;
+    padding: 50px 30px 30px 30px;
   }
 }
 .red-wrapper .buttons {
@@ -2209,6 +2220,13 @@ body.locked {
   font-family: var(--400);
   font-size: 16px;
   margin-top: 5px;
+}
+@media (max-width: 767px) {
+  .red-wrapper .buttons .link {
+    font-size: 14px;
+    margin-top: 2px;
+    margin-bottom: 10px;
+  }
 }
 
 .popup-image {
@@ -2236,6 +2254,11 @@ body.locked {
   position: absolute;
   top: 0%;
   transform: translate(0%, -110%);
+}
+@media (max-width: 767px) {
+  #faq .title--h4 {
+    font-size: 24px;
+  }
 }
 
 .faq {
@@ -2306,12 +2329,109 @@ body.locked {
 #production .production li p {
   font-size: 16px;
 }
+@media (max-width: 1439px) {
+  #production {
+    max-width: 1140px;
+  }
+  #production .production {
+    gap: 16px;
+  }
+  #production .production li {
+    gap: 18px;
+    width: calc((100% - 80px) / 6);
+  }
+  #production .production li h3 {
+    font-size: 22px;
+  }
+  #production .production li p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1279px) {
+  #production {
+    max-width: 900px;
+  }
+  #production .production {
+    margin-top: 80px;
+  }
+  #production .production li {
+    width: calc((100% - 32px) / 3);
+    margin-top: -80px;
+  }
+  #production .production li img {
+    width: 60%;
+    margin: 0 auto;
+  }
+  #production .production li h3 {
+    font-size: 24px;
+  }
+  #production .production li p {
+    font-size: 16px;
+  }
+}
+@media (max-width: 1023px) {
+  #production {
+    max-width: 640px;
+  }
+  #production .production {
+    margin-top: 20px;
+  }
+  #production .production li {
+    margin-top: -20px;
+  }
+  #production .production li img {
+    width: 80%;
+  }
+  #production .production li h3 {
+    font-size: 20px;
+  }
+  #production .production li p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 767px) {
+  #production {
+    max-width: 640px;
+  }
+  #production .title.title--h4 {
+    font-size: 20px;
+  }
+  #production .production {
+    flex-direction: column;
+    margin-top: 80px;
+  }
+  #production .production li {
+    width: 252px;
+    margin: 0 auto;
+    margin-top: -80px;
+  }
+  #production .production li img {
+    width: 70%;
+  }
+  #production .production li h3 {
+    font-size: 24px;
+  }
+  #production .production li p {
+    font-size: 16px;
+  }
+  #production .production li:nth-child(3), #production .production li:nth-child(5) {
+    margin-top: -100px;
+  }
+  #production .production li:last-child {
+    margin-top: -30px;
+  }
+}
 
 #memory .memory-preview {
   width: 85%;
   margin: 0 auto;
   margin-top: -110px;
   margin-bottom: 20px;
+}
+@media (max-width: 767px) {
+  #memory .popup-subtitle b {
+    font-size: 20px;
+  }
 }
 
 #login .tabs {
@@ -2324,6 +2444,25 @@ body.locked {
 }
 #login .form {
   padding: 30px 40px;
+}
+@media (max-width: 767px) {
+  #login .tabs-navigation li:first-child {
+    max-width: 140px;
+  }
+  #login .tabs-navigation li button {
+    font-size: 20px;
+    padding: 0px 20px;
+    min-height: 60px;
+  }
+  #login .form {
+    padding: 30px 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  #cheque-info .red-wrapper {
+    padding: 50px 20px 30px 20px;
+  }
 }
 
 .register-check-list {
@@ -2339,6 +2478,11 @@ body.locked {
   position: relative;
   padding-left: 40px;
   font-size: 16px;
+}
+@media (max-width: 767px) {
+  .register-check-list li {
+    font-size: 14px;
+  }
 }
 .register-check-list li ul {
   display: flex;
@@ -2358,6 +2502,14 @@ body.locked {
   height: 32px;
   left: 0px;
   top: -5px;
+}
+@media (max-width: 767px) {
+  .register-check-list li img {
+    width: 25px;
+    height: 25px;
+    left: 0px;
+    top: -6px;
+  }
 }
 
 .example {
@@ -2808,6 +2960,11 @@ body.locked {
 .section--winners .container {
   max-width: 868px;
 }
+@media (max-width: 1023px) {
+  .section--winners .container {
+    max-width: 450px;
+  }
+}
 
 .winners-filters {
   display: flex;
@@ -2823,6 +2980,12 @@ body.locked {
 .winners-filters > .label {
   max-width: 240px;
 }
+@media (max-width: 1023px) {
+  .winners-filters > .label {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 .winners-filters > .label .input-icon {
   height: 56px;
   width: 56px;
@@ -2835,6 +2998,11 @@ body.locked {
   width: 100%;
   max-width: 346px;
   position: relative;
+}
+@media (max-width: 1023px) {
+  .winners-filters form {
+    max-width: 100%;
+  }
 }
 .winners-filters form label {
   position: relative;
@@ -3008,6 +3176,11 @@ body.locked {
     max-width: 1060px;
   }
 }
+@media (max-width: 1279px) {
+  .section--lk .container {
+    max-width: 800px;
+  }
+}
 @media (max-width: 767px) {
   .section--lk .container {
     max-width: 450px;
@@ -3024,7 +3197,7 @@ body.locked {
 .section--lk .table tr td:first-child {
   padding-left: 60px;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
   .section--lk .table tr th:first-child,
 .section--lk .table tr td:first-child {
     padding-left: 20px;
@@ -3047,10 +3220,11 @@ body.locked {
   max-width: 170px;
   white-space: nowrap;
 }
-@media (max-width: 1023px) {
+@media (max-width: 1279px) {
   .section--lk .table tr th:last-child,
 .section--lk .table tr td:last-child {
     padding-right: 20px;
+    white-space: initial;
   }
 }
 @media (max-width: 767px) {
@@ -3058,6 +3232,18 @@ body.locked {
 .section--lk .table tr td:last-child {
     padding-right: 0px;
     white-space: initial;
+  }
+}
+@media (max-width: 1279px) {
+  .section--lk .table tr th,
+.section--lk .table tr td {
+    padding: 10px 15px;
+  }
+}
+@media (max-width: 1023px) {
+  .section--lk .table tr th,
+.section--lk .table tr td {
+    padding: 8px 6px;
   }
 }
 .section--lk .table th {
@@ -3181,6 +3367,12 @@ body.locked {
   position: relative;
   width: 100%;
   flex-direction: column;
+}
+@media (max-width: 1023px) {
+  .lk-content {
+    max-width: 450px;
+    margin: 0 auto;
+  }
 }
 .lk-content .subtitle {
   display: block;
