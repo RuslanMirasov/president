@@ -60,7 +60,7 @@
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   .section--mainprize {
     z-index: 1;
     padding: 0px;
@@ -87,6 +87,20 @@
       pointer-events: none;
       z-index: -1;
       clip-path: inset(0);
+      background: url('../img/mainprize-bg.webp') no-repeat center center/cover;
+    }
+
+    &.fix {
+      .fixed-bg {
+        position: fixed;
+      }
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section--mainprize {
+    .fixed-bg {
       background: url('../img/mainprize-bg-mobil.webp') no-repeat center center/cover;
     }
 

@@ -37,3 +37,79 @@
     text-align: center;
   }
 }
+
+@media (max-width: 14439px) {
+  .swiper--weekprize {
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 1279px) {
+  .section--weekprize {
+    padding: 80px 0px 80px 0px;
+  }
+
+  .swiper--weekprize {
+    margin-top: 50px;
+    .swiper-arrow[data-arrow-next],
+    .swiper-arrow[data-arrow-prev] {
+      margin-top: -6%;
+    }
+  }
+
+  .weekprize {
+    gap: 34px;
+    p {
+      font-size: 20px;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .section--weekprize {
+    padding: 80px 0px 50px 0px;
+  }
+
+  .swiper--weekprize {
+    .swiper-arrow[data-arrow-next],
+    .swiper-arrow[data-arrow-prev] {
+      margin-top: -7%;
+    }
+  }
+
+  .weekprize {
+    p {
+      font-size: 16px;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .section--weekprize {
+    padding: 64px 0px 50px 0px;
+  }
+
+  .swiper--weekprize {
+    max-width: 90%;
+  }
+
+  .swiper--weekprize {
+    max-width: 278px;
+    .swiper-slide.swiper-slide-prev,
+    .swiper-slide.swiper-slide-next {
+      opacity: 0;
+    }
+    .swiper-arrow[data-arrow-next],
+    .swiper-arrow[data-arrow-prev] {
+      width: 26px;
+      height: 26px;
+      margin-top: -40px;
+    }
+  }
+
+  .weekprize {
+    p {
+      font-size: 16px;
+    }
+  }
+}
