@@ -136,11 +136,18 @@
   z-index: 4;
   left: 50%;
   margin-left: -27px;
-  bottom: 10px;
+  bottom: 110%;
   transition: color 0.3s;
   color: var(--white);
   background: url('../img/arrow-down.gif') no-repeat center center;
   background-size: 100% auto;
+
+  @media (max-width: 1023px) {
+    bottom: 20%;
+  }
+  @media (max-width: 767px) {
+    bottom: 10%;
+  }
 }
 
 .logout-button {

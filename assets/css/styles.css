@@ -880,7 +880,7 @@ a {
     transform: translate(0px, 0px) rotate(-45deg);
   }
   .header {
-    height: 50px;
+    height: 53px;
     border-bottom: none;
   }
   .header:before {
@@ -889,18 +889,19 @@ a {
     left: 0px;
     top: 0px;
     width: 100%;
-    height: 51px;
+    height: 100%;
     background: var(--bg);
     border-bottom: 3px solid var(--yellow);
     z-index: 2;
   }
   .header__logo {
     margin: 0 auto;
-    height: 50px;
+    height: 53px;
     width: 146px;
   }
   .header__logo .logo {
-    height: 75px;
+    height: 78px;
+    background: url("../img/svg/logo-bg-mobil.svg") no-repeat center top/cover;
   }
   .header__logo .logo img {
     width: 102px;
@@ -1106,11 +1107,21 @@ a {
   z-index: 4;
   left: 50%;
   margin-left: -27px;
-  bottom: 10px;
+  bottom: 110%;
   transition: color 0.3s;
   color: var(--white);
   background: url("../img/arrow-down.gif") no-repeat center center;
   background-size: 100% auto;
+}
+@media (max-width: 1023px) {
+  .scroll-down {
+    bottom: 20%;
+  }
+}
+@media (max-width: 767px) {
+  .scroll-down {
+    bottom: 10%;
+  }
 }
 
 .logout-button {
@@ -2013,7 +2024,7 @@ body.locked {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
   z-index: 1000;
   overflow-x: hidden;
   overflow-y: scroll;
@@ -2572,6 +2583,11 @@ body.locked {
   pointer-events: none;
   overflow: hidden;
 }
+@media (max-width: 767px) {
+  .hero-background {
+    min-width: 1180px;
+  }
+}
 .hero-background img {
   width: 100%;
 }
@@ -2609,12 +2625,16 @@ body.locked {
 }
 
 .section--chees {
-  background: var(--bg);
+  background: rgba(0, 0, 0, 0);
   overflow: visible;
   height: 70px;
+  z-index: 5;
 }
 .section--chees .scroll-down {
-  display: none;
+  display: block;
+  position: absolute;
+  z-index: 4;
+  pointer-events: all;
 }
 .section--chees .container {
   height: 100%;
@@ -2754,7 +2774,7 @@ body.locked {
 @media (max-width: 767px) {
   .section--hero:before {
     padding-top: 0%;
-    min-height: 650px;
+    min-height: 600px;
   }
   .section--hero .container {
     padding-top: 90px;
@@ -2766,19 +2786,13 @@ body.locked {
   .section--chees .container {
     max-width: 375px;
   }
-  .section--chees .scroll-down {
-    display: block;
-    position: absolute;
-    z-index: 4;
-    pointer-events: all;
-  }
   .hero-background {
-    transform: translate(-170px, 30px);
+    transform: translate(-150px, 30px);
   }
   .main-prize {
     padding: 18px 58px;
     bottom: 14px;
-    transform: translate(10px, 0px);
+    transform: translate(10px, -10px);
   }
   .main-prize span {
     font-size: 9px;
@@ -2797,11 +2811,11 @@ body.locked {
     height: 8px;
   }
   .loaded .hero-chees {
-    transform: translate(-85%, -30px);
+    transform: translate(-85%, -42px);
   }
   .hero-chees {
     width: 220px;
-    transform: translate(-185%, -30px);
+    transform: translate(-185%, -42px);
   }
   .hero-center-image {
     position: absolute;
@@ -2810,14 +2824,36 @@ body.locked {
     left: 50%;
     transform: translate(-28%, 0%);
   }
-  .scroll-down {
-    display: none;
-  }
 }
 .section--about {
   padding: 80px 0px 120px 0px;
   z-index: 4;
   overflow: visible;
+}
+.section--about:before {
+  content: "";
+  width: 100%;
+  height: 338px;
+  background: url("../img/svg/hero-bottom.svg") no-repeat left top;
+  background-size: 100% 100%;
+  position: absolute;
+  left: 0px;
+  top: -120px;
+  z-index: 0;
+}
+@media (max-width: 1023px) {
+  .section--about:before {
+    height: 230px;
+    top: -110px;
+  }
+}
+@media (max-width: 767px) {
+  .section--about:before {
+    background: url("../img/svg/hero-bottom.svg") no-repeat left top;
+    background-size: 100% 100%;
+    height: 100px;
+    top: -95px;
+  }
 }
 
 .about-list {
@@ -3420,9 +3456,25 @@ body.locked {
 @media (max-width: 1023px) {
   .section--winners {
     padding: 80px 0px;
-    background: #000102 url("../img/winners.webp") no-repeat center top;
+    background: #000102;
     background-size: auto 100svh;
     background-attachment: fixed;
+  }
+  .section--winners .fixed-bg {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 640px;
+    z-index: 0;
+    pointer-events: none;
+    z-index: -1;
+    -webkit-clip-path: inset(0);
+            clip-path: inset(0);
+    background: url("../img/winners.webp") no-repeat center center/cover;
+  }
+  .section--winners.fix .fixed-bg {
+    position: fixed;
   }
   .winners-filters {
     width: 100%;

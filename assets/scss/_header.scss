@@ -202,7 +202,7 @@
   }
 
   .header {
-    height: 50px;
+    height: 53px;
     border-bottom: none;
     &:before {
       content: '';
@@ -210,7 +210,7 @@
       left: 0px;
       top: 0px;
       width: 100%;
-      height: 51px;
+      height: 100%;
       background: var(--bg);
       border-bottom: 3px solid var(--yellow);
       z-index: 2;
@@ -219,10 +219,11 @@
 
   .header__logo {
     margin: 0 auto;
-    height: 50px;
+    height: 53px;
     width: 146px;
     .logo {
-      height: 75px;
+      height: 78px;
+      background: url('../img/svg/logo-bg-mobil.svg') no-repeat center top/cover;
       img {
         width: 102px;
       }
