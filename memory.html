@@ -8,6 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" type="text/css" href="./assets/css/dropzone.min.css" />
     <link rel="stylesheet" href="./assets/css/styles.min.css" />
     <title>President | Игра</title>
   </head>
@@ -410,23 +411,15 @@
               }
             </script>
 
-            <form class="form" enctype="multipart/form-data" novalidate onsubmit="onChequeLoadFormSubmit(event)">
-              <div class="download-file">
-                <label class="label-for-file">
-                  <input type="file" name="cheque" class="input input-file" required />
-                  <img src="./assets/img/svg/plus.svg" alt="Алёнка" />
-                  <p class="label__text" data-text="Перетащите фото чека или нажмите для выбора">Перетащите фото чека или нажмите для выбора</p>
-                </label>
-              </div>
+            <form action="#" class="dropzone" id="my-dropzone"></form>
 
-              <div class="buttons">
-                <button type="submit" class="button button--submit full">
-                  <span>Загрузить</span>
-                </button>
+            <div class="buttons">
+              <button type="submit" class="button button--submit full" onClick="onChequeLoadFormSubmit(event)">
+                <span>Загрузить</span>
+              </button>
 
-                <a href="#" class="link" data-popup-open="cheque-in-self">Ввести данные чека вручную</a>
-              </div>
-            </form>
+              <a href="#" class="link" data-popup-open="cheque-in-self">Ввести данные чека вручную</a>
+            </div>
           </div>
         </div>
 
@@ -567,11 +560,99 @@
             </div>
           </div>
         </div>
+
+        <!--CALLBACK POPUP-->
+        <div class="popup-content" id="callback">
+          <button class="popup-close" data-popup-close></button>
+          <div class="red-wrapper">
+            <h2 class="popup-title">Обратная связь</h2>
+
+            <!--callback form-->
+            <script>
+              function onCallbackFormSubmit(e) {
+                e.preventDefault();
+                window.popup.open('callback-success');
+              }
+            </script>
+            <form action="#" class="form" novalidate onsubmit="onCallbackFormSubmit(event)">
+              <label class="label">
+                <span class="label__text">Имя</span>
+                <input type="text" name="name" class="input" required />
+              </label>
+              <label class="label">
+                <span class="label__text">E-mail</span>
+                <input type="email" name="email" class="input" required />
+              </label>
+              <label class="label">
+                <span class="label__text">Тема сообщения</span>
+                <div class="select">
+                  <select name="week" class="input input--select placeholder" required>
+                    <option value="" disabled="" selected="" hidden="">Выберите тему</option>
+                    <option value="Неделя 1">Тема 1</option>
+                    <option value="Неделя 2">Тема 2</option>
+                    <option value="Неделя 3">Тема 3</option>
+                  </select>
+                  <span class="input-icon">
+                    <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M13.1569 1.65685L7.1007 7.71301L1.44385 2.05615" stroke="black" stroke-width="2" />
+                    </svg>
+                  </span>
+                </div>
+              </label>
+              <label class="label">
+                <span class="label__text">Текст сообщения</span>
+                <textarea name="message" class="input input--textarea" required></textarea>
+              </label>
+
+              <button type="submit" class="button button--submit full"><span>Отправить</span></button>
+            </form>
+          </div>
+        </div>
+
+        <!--CALLBACK POPUP SUCCESS-->
+        <div class="popup-content" id="callback-success">
+          <button class="popup-close" data-popup-close></button>
+          <div class="red-wrapper">
+            <h2 class="popup-title">Обратная связь</h2>
+
+            <p class="success-text">
+              <strong>Спасибо!</strong>
+              Ваше сообщение отправлено
+            </p>
+
+            <div class="buttons">
+              <button type="button" class="button button--submit full" data-popup-close>Закрыть</button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./assets/js/forms.js" type="module"></script>
     <script src="./assets/js/scripts.js" type="module"></script>
+    <script src="./assets/js/dropzone.min.js"></script>
+    <script>
+      Dropzone.autoDiscover = false;
+
+      const dz = new Dropzone('#my-dropzone', {
+        url: '#',
+        autoProcessQueue: false,
+        uploadMultiple: false,
+        maxFiles: 1,
+        thumbnailWidth: 315,
+        thumbnailHeight: 200,
+        addRemoveLinks: true,
+        clickable: true,
+        acceptedFiles: 'image/*',
+        dictDefaultMessage: 'Перетащите фото чека или нажмите для выбора',
+        dictRemoveFile: 'Удалить',
+      });
+
+      dz.on('maxfilesexceeded', function (file) {
+        this.removeAllFiles();
+        this.addFile(file);
+      });
+    </script>
   </body>
 </html>
