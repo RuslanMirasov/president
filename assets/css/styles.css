@@ -427,6 +427,21 @@ a {
   color: var(--yellow);
 }
 
+.border {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 52px;
+  z-index: 5;
+  pointer-events: none;
+}
+.border.border-top, .border.border-top-red, .border.border-top-invers {
+  margin-bottom: -51px;
+}
+.border.border-bottom {
+  margin-top: -51px;
+}
+
 .border-bottom:before, .border-bottom:after,
 .border-bottom-invers:before,
 .border-bottom-invers:after,
@@ -2979,9 +2994,16 @@ body.locked {
 }
 .section--mainprize {
   padding: 150px 0px;
-  background: url("../img/mainprize-bg.webp") no-repeat left center;
-  background-size: auto 100%;
-  background-attachment: fixed;
+  -webkit-clip-path: inset(0);
+          clip-path: inset(0);
+}
+.section--mainprize .fixed-bg {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100svw;
+  height: 100%;
+  background: url("../img/mainprize-bg.webp") no-repeat center center/cover;
 }
 .section--mainprize .title {
   max-width: 660px;
@@ -3333,9 +3355,16 @@ body.locked {
 .section--winners {
   padding: 100px 0px;
   min-height: 650px;
-  background: var(--bg) url("../img/winners.webp") no-repeat left center;
-  background-size: auto 100%;
-  background-attachment: fixed;
+  -webkit-clip-path: inset(0);
+          clip-path: inset(0);
+}
+.section--winners .fixed-bg {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  width: 100svw;
+  height: 100%;
+  background: url("../img/winners.webp") no-repeat center center/cover;
 }
 .section--winners .container {
   max-width: 868px;
@@ -4055,8 +4084,4 @@ a.dz-remove {
   text-align: center;
   font-family: var(--500);
   margin-top: 10px;
-}
-
-.underline {
-  text-decoration: underline;
 }
