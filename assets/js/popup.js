@@ -61,7 +61,7 @@ export const popup = {
   },
 
   _bindCloseEvents() {
-    document.addEventListener('click', e => {
+    document.addEventListener('mousedown', e => {
       if (this._isOpening || this._isAnimating) return;
 
       const openBtn = e.target.closest('[data-popup-open]');

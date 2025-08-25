@@ -40,6 +40,12 @@
       opacity: 1;
     }
   }
+
+  .button[data-popup-open='cheque'] {
+    span {
+      padding-top: 4px;
+    }
+  }
 }
 
 .memory-board {

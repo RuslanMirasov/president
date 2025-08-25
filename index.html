@@ -445,10 +445,19 @@
                   <span class="label__text">Телефон</span>
                   <input type="tel" name="phone" class="input" required placeholder="+7 ___ ___-__-__" autocomplete="off" />
                 </label>
-                <label class="label">
-                  <input type="checkbox" name="agree" class="checkbox" required />
-                  <span class="label__text">Я соглашаюсь с&nbsp;<a href="#" class="link">Правилами</a> </span>
-                </label>
+                <fieldset>
+                  <label class="label">
+                    <input type="checkbox" name="agree" class="checkbox" required />
+                    <span class="label__text">Я соглашаюсь с&nbsp;<a href="#" class="link">Правилами промоакции</a> </span>
+                  </label>
+                  <label class="label">
+                    <input class="checkbox" required type="checkbox" name="RegistrationInput.PersonalConfirmation" />
+                    <span class="label__text">
+                      Я соглашаюсь с&nbsp;<a href="/assets/pdf/rules.pdf?v=2" class="link">Соглашением на обработку персональных данных</a>
+                    </span>
+                  </label>
+                </fieldset>
+
                 <button type="submit" class="button button--submit full"><span>Зарегистрироваться</span></button>
               </form>
             </div>

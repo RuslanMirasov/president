@@ -1546,6 +1546,10 @@ a {
   --invalid: var(--yellow);
 }
 
+fieldset {
+  border: 0;
+}
+
 .form {
   display: flex;
   flex-wrap: wrap;
@@ -1770,6 +1774,7 @@ textarea {
   display: inline;
   width: auto;
   margin: 0;
+  text-align: left;
 }
 .radio + .label__text:before,
 .checkbox + .label__text:before {
@@ -3863,6 +3868,9 @@ body.locked {
 }
 .swiper--memory .swiper-slide.swiper-slide-active {
   opacity: 1;
+}
+.swiper--memory .button[data-popup-open=cheque] span {
+  padding-top: 4px;
 }
 
 .memory-board {
