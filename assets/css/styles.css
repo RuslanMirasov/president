@@ -2277,6 +2277,9 @@ body.locked {
 @media (max-width: 767px) {
   #faq .title--h4 {
     font-size: 24px;
+    position: relative;
+    transform: translate(0%, 0%);
+    padding-bottom: 10px;
   }
 }
 
@@ -2289,31 +2292,46 @@ body.locked {
   background: rgba(255, 255, 255, 0);
 }
 .faq .accordeon:nth-child(2) {
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
 }
 .faq .accordeon:nth-child(3) {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.06);
 }
 .faq .accordeon:nth-child(4) {
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.09);
 }
 .faq .accordeon:nth-child(5) {
-  background: rgba(255, 255, 255, 0.4);
+  background: rgba(255, 255, 255, 0.12);
 }
 .faq .accordeon:nth-child(6) {
-  background: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.15);
 }
 .faq .accordeon:nth-child(7) {
-  background: rgba(255, 255, 255, 0.6);
+  background: rgba(255, 255, 255, 0.18);
 }
 .faq .accordeon:nth-child(8) {
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.21);
 }
 .faq .accordeon:nth-child(9) {
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.24);
 }
 .faq .accordeon:nth-child(10) {
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.27);
+}
+.faq .accordeon:nth-child(11) {
+  background: rgba(255, 255, 255, 0.3);
+}
+.faq .accordeon:nth-child(12) {
+  background: rgba(255, 255, 255, 0.33);
+}
+.faq .accordeon:nth-child(13) {
+  background: rgba(255, 255, 255, 0.36);
+}
+.faq .accordeon:nth-child(14) {
+  background: rgba(255, 255, 255, 0.39);
+}
+.faq .accordeon:nth-child(15) {
+  background: rgba(255, 255, 255, 0.42);
 }
 
 #production {
@@ -3639,12 +3657,12 @@ body.locked {
 }
 .section--lk .table tr th:first-child,
 .section--lk .table tr td:first-child {
-  padding-left: 60px;
+  padding-left: 30px;
 }
 @media (max-width: 1279px) {
   .section--lk .table tr th:first-child,
 .section--lk .table tr td:first-child {
-    padding-left: 20px;
+    padding-left: 0px;
   }
 }
 @media (max-width: 767px) {
@@ -3658,20 +3676,25 @@ body.locked {
   white-space: initial;
   max-width: 300px;
 }
-.section--lk .table tr th:last-child,
-.section--lk .table tr td:last-child {
-  padding-right: 60px;
-  max-width: 170px;
-  white-space: nowrap;
-}
-@media (max-width: 1279px) {
-  .section--lk .table tr th:last-child,
-.section--lk .table tr td:last-child {
-    padding-right: 20px;
-    white-space: initial;
+@media (max-width: 767px) {
+  .section--lk .table tr th:nth-child(3),
+.section--lk .table tr td:nth-child(3) {
+    white-space: wrap;
   }
 }
 @media (max-width: 767px) {
+  .section--lk .table tr th:nth-child(4),
+.section--lk .table tr td:nth-child(4) {
+    white-space: wrap;
+  }
+}
+.section--lk .table tr th:last-child,
+.section--lk .table tr td:last-child {
+  padding-right: 20px;
+  max-width: 160px;
+  white-space: nowrap;
+}
+@media (max-width: 1279px) {
   .section--lk .table tr th:last-child,
 .section--lk .table tr td:last-child {
     padding-right: 0px;
@@ -3695,6 +3718,27 @@ body.locked {
 }
 .section--lk .table tbody td {
   border-bottom: 1px solid var(--white);
+}
+@media (max-width: 767px) {
+  .section--lk .table tbody td:nth-child(2) {
+    padding: 0;
+  }
+  .section--lk .table tbody td:nth-child(2) img {
+    display: none;
+  }
+}
+.section--lk .table .button {
+  margin: 0;
+  font-size: 18px;
+  padding: 10px 22px;
+  min-height: 24px;
+  border-radius: 12px;
+}
+@media (max-width: 1279px) {
+  .section--lk .table .button {
+    font-size: 12px;
+    padding: 5px 12px;
+  }
 }
 
 .lk-head {
