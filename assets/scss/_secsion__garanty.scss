@@ -1,22 +1,20 @@
 .section--garanty {
   padding: 140px 0px 100px 0px;
   background: var(--bg-dark);
-
-  .container {
-    max-width: 868px;
-  }
 }
 
 .garanty-prizes {
   display: flex;
   position: relative;
   width: 100%;
+  max-width: 868px;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   align-content: center;
   gap: 40px;
-  margin-top: 50px;
+  margin: auto;
+  margin-top: 100px;
 
   li {
     position: relative;
@@ -109,9 +107,6 @@
 }
 
 @media (max-width: 1279px) {
-  .section--garanty .container {
-    max-width: 768px;
-  }
   .garanty-prizes article .image {
     width: 232px;
     height: 217px;
@@ -121,12 +116,6 @@
     span {
       font-size: 16px;
     }
-  }
-}
-
-@media (max-width: 1023px) {
-  .section--garanty .container {
-    max-width: 680px;
   }
 }
 

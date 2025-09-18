@@ -1,3 +1,15 @@
+.titleBox {
+  display: flex;
+  position: relative;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 24px;
+  text-align: center;
+}
+
 .title {
   font-family: var(--3);
   text-transform: uppercase;

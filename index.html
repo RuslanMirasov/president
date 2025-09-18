@@ -133,18 +133,22 @@
         class="section section--weekprize"
         data-slider
         data-slides-per-view="3,3,1"
-        data-slides-per-group="1,1,1"
+        data-slides-per-group="4,1,1"
         data-space-between="24,20,20"
         data-centered="true"
         data-initial-slide="1,1,0"
       >
         <div class="container">
-          <h2 class="title title--h2 yellow">Еженедельные призы</h2>
+          <div class="titleBox">
+            <h2 class="title title--h2 yellow">Еженедельные призы</h2>
+            <h2 class="title title--h3">Выбирай категорию и выигрывай призы!</h2>
+          </div>
 
           <div class="swiper swiper--weekprize">
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="weekprize">
+                  <h3 class="title title--h3 yellow">Отдых&nbsp;и&nbsp;релакс</h3>
                   <img src="./assets/img/prizes/otello.webp" alt="otello" />
                   <p>Сертификат Оттелло</p>
                 </div>
@@ -152,13 +156,7 @@
 
               <div class="swiper-slide">
                 <div class="weekprize">
-                  <img src="./assets/img/prizes/cuva.webp" alt="cuva" />
-                  <p>Сертификат Cuva</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="weekprize">
+                  <h3 class="title title--h3 yellow">Дом&nbsp;и&nbsp;уют</h3>
                   <img src="./assets/img/prizes/cozy-home.webp" alt="cozy-home" />
                   <p>Сертификат Cozy Home</p>
                 </div>
@@ -166,20 +164,7 @@
 
               <div class="swiper-slide">
                 <div class="weekprize">
-                  <img src="./assets/img/prizes/ozon-20000.webp" alt="ozon" />
-                  <p>Сертификат Ozon</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="weekprize">
-                  <img src="./assets/img/prizes/ozon-30000.webp" alt="ozon" />
-                  <p>Сертификат Ozon</p>
-                </div>
-              </div>
-
-              <div class="swiper-slide">
-                <div class="weekprize">
+                  <h3 class="title title--h3 yellow">Техника&nbsp;и&nbsp;гаджеты</h3>
                   <img src="./assets/img/prizes/m-video.webp" alt="m-video" />
                   <p>Сертификат М.Видео</p>
                 </div>
@@ -187,15 +172,25 @@
 
               <div class="swiper-slide">
                 <div class="weekprize">
-                  <img src="./assets/img/prizes/m-video-15000.webp" alt="m-video" />
-                  <p>Сертификат М.Видео</p>
+                  <h3 class="title title--h3 yellow">Отдых&nbsp;и&nbsp;релакс</h3>
+                  <img src="./assets/img/prizes/cuva.webp" alt="cuva" />
+                  <p>Сертификат Cuva</p>
                 </div>
               </div>
 
               <div class="swiper-slide">
                 <div class="weekprize">
+                  <h3 class="title title--h3 yellow">Дом&nbsp;и&nbsp;уют</h3>
                   <img src="./assets/img/prizes/hoff.webp" alt="hoff" />
                   <p>Сертификат Hoff</p>
+                </div>
+              </div>
+
+              <div class="swiper-slide">
+                <div class="weekprize">
+                  <h3 class="title title--h3 yellow">Техника&nbsp;и&nbsp;гаджеты</h3>
+                  <img src="./assets/img/prizes/m-video-15000.webp" alt="m-video" />
+                  <p>Сертификат М.Видео</p>
                 </div>
               </div>
             </div>
@@ -203,12 +198,30 @@
             <button class="swiper-arrow" data-arrow-prev></button>
             <button class="swiper-arrow" data-arrow-next></button>
           </div>
-        </div>
-      </section>
 
-      <!--GARANTY PRIZES-->
-      <section class="section section--garanty border-top-red">
-        <div class="container">
+          <ul class="ozone-prizes">
+            <li>
+              <article class="weekprize">
+                <span class="yellow"> Зарегистрируй 2 чека в&nbsp;неделю и участвуй в&nbsp;розыгрыше сертификата на&nbsp;OZON 20&nbsp;000р. </span>
+                <div class="weekprize__image">
+                  <img src="./assets/img/prizes/ozon-20000.webp" alt="ozon" />
+                  <span class="blik"></span>
+                </div>
+                <p>Сертификат Ozon</p>
+              </article>
+            </li>
+            <li>
+              <article class="weekprize">
+                <span class="yellow"> Зарегистрируй 3 чека в&nbsp;неделю и участвуй в&nbsp;розыгрыше сертификата на&nbsp;OZON 30&nbsp;000р. </span>
+                <div class="weekprize__image">
+                  <img src="./assets/img/prizes/ozon-30000.webp" alt="ozon" />
+                  <span class="blik"></span>
+                </div>
+                <p>Сертификат Ozon</p>
+              </article>
+            </li>
+          </ul>
+
           <ul class="garanty-prizes">
             <li>
               <h2 class="title title--h2 yellow">Гарантированный приз</h2>
@@ -237,6 +250,72 @@
               </article>
             </li>
           </ul>
+        </div>
+      </section>
+
+      <!--PRODUCTS-->
+      <section
+        class="section section--garanty border-top-red"
+        data-slider
+        data-slides-per-view="3,2,1"
+        data-slides-per-group="1,1,1"
+        data-space-between="0,0,0"
+        data-initial-slide="0,0,0"
+      >
+        <div class="container">
+          <h2 class="title title--h2 yellow">Продукты, участвующие в&nbsp;акции</h2>
+
+          <div class="swiper swiper--products">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="image">
+                  <img src="./assets/img/productions/1.webp" alt="" />
+                </div>
+                <h3>Brie</h3>
+                <p>Классический сыр&nbsp;с&nbsp;благородной плесенью, знаменитый своей бархатистой корочкой и&nbsp;глубоким сливочным вкусом</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img src="./assets/img/productions/2.webp" alt="" />
+                </div>
+                <h3>Camembert</h3>
+                <p>Легендарный сыр с&nbsp;нежной сердцевиной и&nbsp;пикантным вусом&nbsp;тонкой бархатистой&nbsp;корочки</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img src="./assets/img/productions/3.webp" alt="" />
+                </div>
+                <h3>Le Cremiot Extra Fondant</h3>
+                <p>Сыр с&nbsp;нежнейшей кремовой текстурой, который буквально тает во&nbsp;рту.</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img src="./assets/img/productions/4.webp" alt="" />
+                </div>
+                <h3>Royal Bleu</h3>
+                <p>
+                  Сыр с&nbsp;голубой плесенью и&nbsp;уникальным вкусом, который достигается благодаря длинному сроку созревания (до&nbsp;90&nbsp;дней)
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img src="./assets/img/productions/5.webp" alt="" />
+                </div>
+                <h3>La Brique</h3>
+                <p>Тонкая корочка, текучая текстура и&nbsp;бесподобный вкус с&nbsp;прятными нотками тёплого молока и&nbsp;фундка</p>
+              </div>
+              <div class="swiper-slide">
+                <div class="image">
+                  <img src="./assets/img/productions/6.webp" alt="" />
+                </div>
+                <h3>Red Snack</h3>
+                <p>Уникальный насыщенный вкус с&nbsp;пикантными дымными нотками и&nbsp;сливочным послевкусием</p>
+              </div>
+            </div>
+
+            <button class="swiper-arrow" data-arrow-prev></button>
+            <button class="swiper-arrow" data-arrow-next></button>
+          </div>
         </div>
       </section>
 
