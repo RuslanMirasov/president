@@ -3306,9 +3306,6 @@ body.locked {
 .swiper--products .swiper-arrow[data-arrow-prev] {
   right: calc(100% - 24px);
 }
-.swiper--products img {
-  height: 400px;
-}
 .swiper--products .swiper-slide {
   display: flex;
   position: relative;
@@ -3336,26 +3333,8 @@ body.locked {
 }
 .swiper--products .swiper-slide .image img {
   position: absolute;
-}
-.swiper--products .swiper-slide:nth-child(1) .image img {
-  bottom: -20px;
-  height: 330px;
-}
-.swiper--products .swiper-slide:nth-child(2) .image img {
-  bottom: 0px;
-}
-.swiper--products .swiper-slide:nth-child(3) .image img {
-  bottom: 30px;
-}
-.swiper--products .swiper-slide:nth-child(4) .image img {
-  bottom: 0px;
-}
-.swiper--products .swiper-slide:nth-child(5) .image img {
-  bottom: 30px;
-}
-.swiper--products .swiper-slide:nth-child(6) .image img {
-  height: 350px;
-  bottom: -10px;
+  flex-shrink: 0;
+  height: auto;
 }
 .swiper--products .swiper-slide h3 {
   font-size: 24px;

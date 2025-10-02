@@ -168,9 +168,7 @@
       right: calc(100% - 24px);
     }
   }
-  img {
-    height: 400px;
-  }
+
   .swiper-slide {
     display: flex;
     position: relative;
@@ -199,51 +197,8 @@
       align-content: flex-end;
       img {
         position: absolute;
-      }
-    }
-
-    &:nth-child(1) {
-      .image {
-        img {
-          bottom: -20px;
-          height: 330px;
-        }
-      }
-    }
-    &:nth-child(2) {
-      .image {
-        img {
-          bottom: 0px;
-        }
-      }
-    }
-    &:nth-child(3) {
-      .image {
-        img {
-          bottom: 30px;
-        }
-      }
-    }
-    &:nth-child(4) {
-      .image {
-        img {
-          bottom: 0px;
-        }
-      }
-    }
-    &:nth-child(5) {
-      .image {
-        img {
-          bottom: 30px;
-        }
-      }
-    }
-    &:nth-child(6) {
-      .image {
-        img {
-          height: 350px;
-          bottom: -10px;
-        }
+        flex-shrink: 0;
+        height: auto;
       }
     }
 
